@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C812034A1D8DCC4E00A89DE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */; };
+		C812034C1D8DCC4E00A89DE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C812034B1D8DCC4E00A89DE0 /* ViewController.swift */; };
+		C812034F1D8DCC4E00A89DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C812034D1D8DCC4E00A89DE0 /* Main.storyboard */; };
+		C81203511D8DCC4E00A89DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C81203501D8DCC4E00A89DE0 /* Assets.xcassets */; };
+		C81203541D8DCC4E00A89DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C81203521D8DCC4E00A89DE0 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C81203461D8DCC4E00A89DE0 /* Infinnovation Stock Exchange Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Infinnovation Stock Exchange Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C812034B1D8DCC4E00A89DE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C812034E1D8DCC4E00A89DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C81203501D8DCC4E00A89DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C81203531D8DCC4E00A89DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C81203551D8DCC4E00A89DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C81203431D8DCC4D00A89DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C812033D1D8DCC4D00A89DE0 = {
+			isa = PBXGroup;
+			children = (
+				C81203481D8DCC4E00A89DE0 /* Infinnovation Stock Exchange Simulator */,
+				C81203471D8DCC4E00A89DE0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C81203471D8DCC4E00A89DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C81203461D8DCC4E00A89DE0 /* Infinnovation Stock Exchange Simulator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C81203481D8DCC4E00A89DE0 /* Infinnovation Stock Exchange Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */,
+				C812034B1D8DCC4E00A89DE0 /* ViewController.swift */,
+				C812034D1D8DCC4E00A89DE0 /* Main.storyboard */,
+				C81203501D8DCC4E00A89DE0 /* Assets.xcassets */,
+				C81203521D8DCC4E00A89DE0 /* LaunchScreen.storyboard */,
+				C81203551D8DCC4E00A89DE0 /* Info.plist */,
+			);
+			path = "Infinnovation Stock Exchange Simulator";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C81203451D8DCC4D00A89DE0 /* Infinnovation Stock Exchange Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C81203581D8DCC4E00A89DE0 /* Build configuration list for PBXNativeTarget "Infinnovation Stock Exchange Simulator" */;
+			buildPhases = (
+				C81203421D8DCC4D00A89DE0 /* Sources */,
+				C81203431D8DCC4D00A89DE0 /* Frameworks */,
+				C81203441D8DCC4D00A89DE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Infinnovation Stock Exchange Simulator";
+			productName = "Infinnovation Stock Exchange Simulator";
+			productReference = C81203461D8DCC4E00A89DE0 /* Infinnovation Stock Exchange Simulator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C812033E1D8DCC4D00A89DE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = infinnovation;
+				TargetAttributes = {
+					C81203451D8DCC4D00A89DE0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 687NW7TG3Z;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C81203411D8DCC4D00A89DE0 /* Build configuration list for PBXProject "Infinnovation Stock Exchange Simulator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C812033D1D8DCC4D00A89DE0;
+			productRefGroup = C81203471D8DCC4E00A89DE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C81203451D8DCC4D00A89DE0 /* Infinnovation Stock Exchange Simulator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C81203441D8DCC4D00A89DE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C81203541D8DCC4E00A89DE0 /* LaunchScreen.storyboard in Resources */,
+				C81203511D8DCC4E00A89DE0 /* Assets.xcassets in Resources */,
+				C812034F1D8DCC4E00A89DE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C81203421D8DCC4D00A89DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C812034C1D8DCC4E00A89DE0 /* ViewController.swift in Sources */,
+				C812034A1D8DCC4E00A89DE0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C812034D1D8DCC4E00A89DE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C812034E1D8DCC4E00A89DE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C81203521D8DCC4E00A89DE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C81203531D8DCC4E00A89DE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C81203561D8DCC4E00A89DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C81203571D8DCC4E00A89DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C81203591D8DCC4E00A89DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C812035A1D8DCC4E00A89DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C81203411D8DCC4D00A89DE0 /* Build configuration list for PBXProject "Infinnovation Stock Exchange Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C81203561D8DCC4E00A89DE0 /* Debug */,
+				C81203571D8DCC4E00A89DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C81203581D8DCC4E00A89DE0 /* Build configuration list for PBXNativeTarget "Infinnovation Stock Exchange Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C81203591D8DCC4E00A89DE0 /* Debug */,
+				C812035A1D8DCC4E00A89DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C812033E1D8DCC4D00A89DE0 /* Project object */;
+}
