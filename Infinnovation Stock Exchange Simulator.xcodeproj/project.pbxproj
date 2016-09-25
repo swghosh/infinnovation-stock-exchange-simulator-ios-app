@@ -302,6 +302,7 @@
 				C812035A1D8DCC4E00A89DE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
