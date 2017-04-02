@@ -10,10 +10,12 @@ import UIKit
 
 class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        activity.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

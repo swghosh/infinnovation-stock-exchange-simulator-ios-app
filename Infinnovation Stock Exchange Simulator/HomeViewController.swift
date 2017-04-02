@@ -10,11 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     var stocks: [Stock] = [Stock(name: "ACC", current: 899, difference: -90, percentage: -3.5, sector: "Cement"), Stock(name: "Apple", current: 899, difference: 90, percentage: 3.5, sector: "Information Technology"), Stock(name: "ACC", current: 899, difference: -90, percentage: -3.5, sector: "Cement")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        activity.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

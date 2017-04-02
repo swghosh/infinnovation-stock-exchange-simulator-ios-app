@@ -145,7 +145,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHd-Vg-y9b" secondAttribute="bottom" id="xbj-N4-WwO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="gP3-Ae-iKP" userLabel="Home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" id="gP3-Ae-iKP" userLabel="Home"/>
+                    <connections>
+                        <outlet property="activity" destination="CNU-fw-1gC" id="sgY-KN-clz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,67 +270,14 @@
                             <constraint firstItem="gjI-mf-JR2" firstAttribute="top" secondItem="RRk-YG-bwY" secondAttribute="bottom" constant="16" id="woT-Gi-67I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Headlines" id="mij-tu-emW" userLabel="Headlines"/>
+                    <tabBarItem key="tabBarItem" title="Headlines" image="NewsIcon" id="mij-tu-emW" userLabel="Headlines"/>
+                    <connections>
+                        <outlet property="activity" destination="8TB-ZJ-cW5" id="WK0-pw-4zm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTA-Ut-EZ8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1668" y="-446"/>
-        </scene>
-        <!--Details-->
-        <scene sceneID="gsY-MK-bJJ">
-            <objects>
-                <viewController id="DHj-cs-DEp" userLabel="Details" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7Qe-al-z70"/>
-                        <viewControllerLayoutGuide type="bottom" id="2o8-lp-Fsd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UoL-0T-grf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTJ-Lw-lHj">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2jv-Ij-qaM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="dataSource" destination="DHj-cs-DEp" id="UvW-34-O55"/>
-                                            <outlet property="delegate" destination="DHj-cs-DEp" id="hHH-9t-pL2"/>
-                                        </connections>
-                                    </tableView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="centerX" secondItem="LTJ-Lw-lHj" secondAttribute="centerX" id="FC3-hM-7Xr"/>
-                                    <constraint firstAttribute="trailing" secondItem="2jv-Ij-qaM" secondAttribute="trailing" id="MjC-bg-J34"/>
-                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="leading" secondItem="LTJ-Lw-lHj" secondAttribute="leading" id="Tdb-Ju-CE9"/>
-                                    <constraint firstAttribute="bottom" secondItem="2jv-Ij-qaM" secondAttribute="bottom" id="Uqe-1F-2Uf"/>
-                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="top" secondItem="LTJ-Lw-lHj" secondAttribute="top" id="Z2k-Cm-qfo"/>
-                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="centerY" secondItem="LTJ-Lw-lHj" secondAttribute="centerY" id="frW-TP-JpG"/>
-                                </constraints>
-                            </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-XU-Qrw" userLabel="Heading">
-                                <rect key="frame" x="52" y="30" width="271" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="LTJ-Lw-lHj" firstAttribute="leading" secondItem="UoL-0T-grf" secondAttribute="leadingMargin" constant="-16" id="0fy-pN-XtW"/>
-                            <constraint firstItem="XUa-XU-Qrw" firstAttribute="centerX" secondItem="UoL-0T-grf" secondAttribute="centerX" id="4GA-5E-a2L"/>
-                            <constraint firstItem="2o8-lp-Fsd" firstAttribute="top" secondItem="LTJ-Lw-lHj" secondAttribute="bottom" id="9rK-2M-9x4"/>
-                            <constraint firstItem="LTJ-Lw-lHj" firstAttribute="top" secondItem="XUa-XU-Qrw" secondAttribute="bottom" constant="16" id="BqU-tN-jRM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LTJ-Lw-lHj" secondAttribute="trailing" constant="-16" id="KNj-VX-QUf"/>
-                            <constraint firstItem="XUa-XU-Qrw" firstAttribute="top" secondItem="7Qe-al-z70" secondAttribute="bottom" constant="10" id="L7e-9C-Bt8"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Lwe-2X-bBH" userLabel="Home"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XOe-JT-eOb" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="972" y="858"/>
         </scene>
         <!--About-->
         <scene sceneID="pbP-tN-R8b">
@@ -343,6 +293,21 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktx-K2-L22">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6AT-DM-mI8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <sections/>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6AT-DM-mI8" secondAttribute="bottom" id="5Gj-rq-Mqc"/>
+                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="top" secondItem="ktx-K2-L22" secondAttribute="top" id="Dgg-je-v0A"/>
+                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="centerY" secondItem="ktx-K2-L22" secondAttribute="centerY" id="PlQ-JV-CMQ"/>
+                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="leading" secondItem="ktx-K2-L22" secondAttribute="leading" id="RJb-Il-gRX"/>
+                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="centerX" secondItem="ktx-K2-L22" secondAttribute="centerX" id="htS-zR-y7M"/>
+                                    <constraint firstAttribute="trailing" secondItem="6AT-DM-mI8" secondAttribute="trailing" id="pRm-V3-EZr"/>
+                                </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xq-oj-qgv" userLabel="Heading">
                                 <rect key="frame" x="52" y="30" width="271" height="18"/>
@@ -361,11 +326,16 @@
                             <constraint firstItem="ktx-K2-L22" firstAttribute="top" secondItem="0Xq-oj-qgv" secondAttribute="bottom" constant="16" id="zUh-Kf-j0g"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="mQZ-Rx-2AF" userLabel="About"/>
+                    <tabBarItem key="tabBarItem" title="About" image="AboutIcon" id="mQZ-Rx-2AF" userLabel="About"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZd-1h-cXE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="506"/>
+            <point key="canvasLocation" x="1668" y="505.99700149925042"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AboutIcon" width="30" height="30"/>
+        <image name="HomeIcon" width="30" height="30"/>
+        <image name="NewsIcon" width="30" height="30"/>
+    </resources>
 </document>

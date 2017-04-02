@@ -38,7 +38,7 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-gi-4hA">
                                 <rect key="frame" x="233" y="348" width="37" height="37"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beveled logo transparent" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-R7-ldJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-R7-ldJ">
                                 <rect key="frame" x="204" y="180" width="94" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="94" id="Ar7-Ij-9CP"/>
@@ -67,6 +67,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="beveled logo transparent" width="150" height="150"/>
+        <image name="Logo" width="150" height="150"/>
     </resources>
 </document>
