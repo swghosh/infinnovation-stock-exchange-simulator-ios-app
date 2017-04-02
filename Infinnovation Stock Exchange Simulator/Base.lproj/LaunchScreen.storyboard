@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,6 +38,14 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HC6-gi-4hA">
                                 <rect key="frame" x="233" y="348" width="37" height="37"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beveled logo transparent" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-R7-ldJ">
+                                <rect key="frame" x="204" y="180" width="94" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="Ar7-Ij-9CP"/>
+                                    <constraint firstAttribute="width" secondItem="3Hz-R7-ldJ" secondAttribute="height" multiplier="1:1" id="YqZ-o3-g3H"/>
+                                    <constraint firstAttribute="height" constant="94" id="xkr-yn-Dbr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -44,7 +53,9 @@
                             <constraint firstItem="HC6-gi-4hA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="33" id="LLN-HS-gw8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Egi-3v-mOc" secondAttribute="trailing" constant="34" id="Ow4-Gv-dQ0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PNi-er-jMR" secondAttribute="trailing" constant="40" id="VzK-aF-rP9"/>
+                            <constraint firstItem="PNi-er-jMR" firstAttribute="top" secondItem="3Hz-R7-ldJ" secondAttribute="bottom" constant="8.5" id="Xsh-os-efc"/>
                             <constraint firstItem="HC6-gi-4hA" firstAttribute="top" secondItem="PNi-er-jMR" secondAttribute="bottom" constant="36" id="fiq-jP-ALt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Hz-R7-ldJ" secondAttribute="trailing" constant="61" id="hqm-zV-OPW"/>
                             <constraint firstItem="HC6-gi-4hA" firstAttribute="top" secondItem="PNi-er-jMR" secondAttribute="bottom" constant="36" id="jRN-ue-dWg"/>
                             <constraint firstItem="Egi-3v-mOc" firstAttribute="top" secondItem="HC6-gi-4hA" secondAttribute="bottom" constant="-65" id="uR9-OQ-r6o"/>
                         </constraints>
@@ -55,4 +66,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beveled logo transparent" width="150" height="150"/>
+    </resources>
 </document>

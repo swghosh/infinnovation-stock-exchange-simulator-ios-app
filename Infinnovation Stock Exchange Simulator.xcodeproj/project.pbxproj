@@ -15,6 +15,9 @@
 		C81C69611E902CBF00F2B4C4 /* SectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695D1E902CBF00F2B4C4 /* SectorTableViewCell.swift */; };
 		C81C69621E902CBF00F2B4C4 /* StockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695E1E902CBF00F2B4C4 /* StockDataModel.swift */; };
 		C81C69631E902CBF00F2B4C4 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */; };
+		C8D5DB861E915B5F005A4F41 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */; };
+		C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */; };
+		C8D5DB8A1E9185EF005A4F41 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C81C695D1E902CBF00F2B4C4 /* SectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorTableViewCell.swift; sourceTree = "<group>"; };
 		C81C695E1E902CBF00F2B4C4 /* StockDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockDataModel.swift; sourceTree = "<group>"; };
 		C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
+		C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */,
 				C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */,
 				C812034D1D8DCC4E00A89DE0 /* Main.storyboard */,
+				C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */,
+				C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */,
+				C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */,
 				C81203501D8DCC4E00A89DE0 /* Assets.xcassets */,
 				C81203521D8DCC4E00A89DE0 /* LaunchScreen.storyboard */,
 				C81203551D8DCC4E00A89DE0 /* Info.plist */,
@@ -147,9 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C81C69621E902CBF00F2B4C4 /* StockDataModel.swift in Sources */,
+				C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */,
 				C812034A1D8DCC4E00A89DE0 /* AppDelegate.swift in Sources */,
+				C8D5DB861E915B5F005A4F41 /* HeadlinesViewController.swift in Sources */,
 				C81C69601E902CBF00F2B4C4 /* HomeViewController.swift in Sources */,
 				C81C69631E902CBF00F2B4C4 /* StockTableViewCell.swift in Sources */,
+				C8D5DB8A1E9185EF005A4F41 /* AboutViewController.swift in Sources */,
 				C81C69611E902CBF00F2B4C4 /* SectorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

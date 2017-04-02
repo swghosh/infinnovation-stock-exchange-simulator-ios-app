@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="InfiSES" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Home" customClass="HomeViewController" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sector" id="lL3-ak-Gql" customClass="SectorTableViewCell" customModule="InfiSES" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sector" id="lL3-ak-Gql" customClass="SectorTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lL3-ak-Gql" id="YvC-8M-5PW">
@@ -52,7 +52,7 @@
                                                     <outlet property="sectorName" destination="caM-q9-oxK" id="CQd-qB-SyX"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Stock" id="hLy-yK-sUB" customClass="StockTableViewCell" customModule="InfiSES" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Stock" id="hLy-yK-sUB" customClass="StockTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLy-yK-sUB" id="WxL-WE-RDv">
@@ -112,11 +112,17 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="sAx-Hx-Wbo"/>
                                         </connections>
                                     </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-fw-1gC">
+                                        <rect key="frame" x="169" y="259" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="FQh-39-qJ2" secondAttribute="trailing" id="BG8-0L-2ap"/>
                                     <constraint firstItem="FQh-39-qJ2" firstAttribute="centerX" secondItem="AHd-Vg-y9b" secondAttribute="centerX" id="HlI-be-bXd"/>
                                     <constraint firstItem="FQh-39-qJ2" firstAttribute="leading" secondItem="AHd-Vg-y9b" secondAttribute="leading" id="Nge-lk-6gQ"/>
+                                    <constraint firstItem="CNU-fw-1gC" firstAttribute="centerX" secondItem="AHd-Vg-y9b" secondAttribute="centerX" id="OEL-2w-cDd"/>
+                                    <constraint firstItem="CNU-fw-1gC" firstAttribute="centerY" secondItem="AHd-Vg-y9b" secondAttribute="centerY" id="T0m-Zr-wNn"/>
                                     <constraint firstItem="FQh-39-qJ2" firstAttribute="top" secondItem="AHd-Vg-y9b" secondAttribute="top" id="hvw-X2-ibI"/>
                                     <constraint firstAttribute="bottom" secondItem="FQh-39-qJ2" secondAttribute="bottom" id="tGw-Sh-isp"/>
                                     <constraint firstItem="FQh-39-qJ2" firstAttribute="centerY" secondItem="AHd-Vg-y9b" secondAttribute="centerY" id="w4Y-tl-m8l"/>
@@ -131,12 +137,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WYz-Gt-77h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="2p4-JF-d3A"/>
                             <constraint firstItem="AHd-Vg-y9b" firstAttribute="top" secondItem="WYz-Gt-77h" secondAttribute="bottom" constant="16" id="4um-3d-YIJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AHd-Vg-y9b" secondAttribute="trailing" constant="-16" id="8Vg-Wu-mrO"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHd-Vg-y9b" secondAttribute="bottom" id="Nb3-YD-gLI"/>
+                            <constraint firstItem="WYz-Gt-77h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="EMb-a9-JkI"/>
                             <constraint firstItem="AHd-Vg-y9b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="RVY-zu-1r5"/>
                             <constraint firstItem="WYz-Gt-77h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pwe-XH-RhN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHd-Vg-y9b" secondAttribute="bottom" id="xbj-N4-WwO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="gP3-Ae-iKP" userLabel="Home"/>
@@ -157,9 +163,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Foe-xD-gLE"/>
-                        <segue destination="LFr-TG-xAm" kind="relationship" relationship="viewControllers" id="Zvs-N8-1kp"/>
-                        <segue destination="d3M-d8-Nj9" kind="relationship" relationship="viewControllers" id="rcg-99-N5D"/>
-                        <segue destination="J2S-Hq-IM9" kind="relationship" relationship="viewControllers" id="3Or-z0-f8n"/>
+                        <segue destination="hdJ-3T-Vcj" kind="relationship" relationship="viewControllers" id="Goq-Fs-W3n"/>
+                        <segue destination="ocB-qs-BB0" kind="relationship" relationship="viewControllers" id="MGR-kw-ph7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rbk-hJ-bAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,124 +172,200 @@
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
         <!--Headlines-->
-        <scene sceneID="rnN-R3-IwY">
+        <scene sceneID="Imi-4e-Ye9">
             <objects>
-                <viewController id="d3M-d8-Nj9" userLabel="Headlines" sceneMemberID="viewController">
+                <viewController id="hdJ-3T-Vcj" userLabel="Headlines" customClass="HeadlinesViewController" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="muy-sg-yTa"/>
-                        <viewControllerLayoutGuide type="bottom" id="NWW-nz-0Ee"/>
+                        <viewControllerLayoutGuide type="top" id="EuO-91-3bf"/>
+                        <viewControllerLayoutGuide type="bottom" id="x6v-lk-ZOu"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gC8-E1-xtw">
+                    <view key="view" contentMode="scaleToFill" id="kAD-ix-xPo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRx-Lz-99l">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Infinnovation Stock Exchange Simulator" id="TcI-Wt-2B9"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVq-cb-629">
-                                <rect key="frame" x="16" y="64" width="76" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gjI-mf-JR2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cg8-vV-UzW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="News" rowHeight="200" id="tfA-fr-sKk" customClass="NewsTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tfA-fr-sKk" id="uJ1-8G-IHv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/04/2017 23:42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9p-nU-pmx" userLabel="Date">
+                                                            <rect key="frame" x="8" y="8" width="95" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-Tt-3rY" userLabel="News">
+                                                            <rect key="frame" x="8" y="29.5" width="359" height="19.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="This is a sample news item.">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="topMargin" secondItem="l9p-nU-pmx" secondAttribute="top" id="5AR-XO-mk1"/>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="k8D-Tt-3rY" secondAttribute="leading" id="J3a-YI-3Ei"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="k8D-Tt-3rY" secondAttribute="trailing" id="JFD-2M-QSp"/>
+                                                        <constraint firstItem="k8D-Tt-3rY" firstAttribute="top" secondItem="l9p-nU-pmx" secondAttribute="bottom" constant="8" id="XVc-ne-25p"/>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="l9p-nU-pmx" secondAttribute="leading" id="mEy-xp-fgG"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="news" destination="k8D-Tt-3rY" id="Qjc-EP-7Y4"/>
+                                                    <outlet property="time" destination="l9p-nU-pmx" id="BL2-ut-HBe"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="hdJ-3T-Vcj" id="Aha-LL-ZyM"/>
+                                            <outlet property="delegate" destination="hdJ-3T-Vcj" id="JJT-ON-FfR"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cg8-vV-UzW" firstAttribute="top" secondItem="gjI-mf-JR2" secondAttribute="top" id="2jJ-Yw-U52"/>
+                                    <constraint firstItem="cg8-vV-UzW" firstAttribute="centerX" secondItem="gjI-mf-JR2" secondAttribute="centerX" id="3fS-lF-boi"/>
+                                    <constraint firstItem="cg8-vV-UzW" firstAttribute="leading" secondItem="gjI-mf-JR2" secondAttribute="leading" id="4Fb-vF-JAP"/>
+                                    <constraint firstItem="cg8-vV-UzW" firstAttribute="centerY" secondItem="gjI-mf-JR2" secondAttribute="centerY" id="XDi-5Q-o72"/>
+                                    <constraint firstAttribute="trailing" secondItem="cg8-vV-UzW" secondAttribute="trailing" id="e9m-Fs-Niu"/>
+                                    <constraint firstAttribute="bottom" secondItem="cg8-vV-UzW" secondAttribute="bottom" id="tHE-Wx-Uk0"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRk-YG-bwY" userLabel="Heading">
+                                <rect key="frame" x="52" y="30" width="271" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-ZJ-cW5">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cRx-Lz-99l" firstAttribute="top" secondItem="muy-sg-yTa" secondAttribute="bottom" id="IC8-hR-UnA"/>
-                            <constraint firstItem="cRx-Lz-99l" firstAttribute="leading" secondItem="gC8-E1-xtw" secondAttribute="leading" id="PLn-0L-ndQ"/>
-                            <constraint firstAttribute="trailing" secondItem="cRx-Lz-99l" secondAttribute="trailing" id="SE1-ps-xTY"/>
-                            <constraint firstItem="cRx-Lz-99l" firstAttribute="bottom" secondItem="fVq-cb-629" secondAttribute="top" id="pNv-kV-g58"/>
-                            <constraint firstItem="fVq-cb-629" firstAttribute="leading" secondItem="gC8-E1-xtw" secondAttribute="leadingMargin" id="zSK-0B-cIl"/>
+                            <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="8ni-Bv-XkR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjI-mf-JR2" secondAttribute="trailing" constant="-16" id="AW5-4b-BqG"/>
+                            <constraint firstItem="gjI-mf-JR2" firstAttribute="leading" secondItem="kAD-ix-xPo" secondAttribute="leadingMargin" constant="-16" id="Cjg-81-az8"/>
+                            <constraint firstItem="x6v-lk-ZOu" firstAttribute="top" secondItem="gjI-mf-JR2" secondAttribute="bottom" id="OMH-Vd-1g6"/>
+                            <constraint firstItem="RRk-YG-bwY" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="TzA-K5-5Ll"/>
+                            <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerY" secondItem="kAD-ix-xPo" secondAttribute="centerY" id="WPD-Zh-LeV"/>
+                            <constraint firstItem="RRk-YG-bwY" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="10" id="obk-xU-d5p"/>
+                            <constraint firstItem="gjI-mf-JR2" firstAttribute="top" secondItem="RRk-YG-bwY" secondAttribute="bottom" constant="16" id="woT-Gi-67I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Headlines" id="Pz1-pN-dii" userLabel="Headlines"/>
+                    <tabBarItem key="tabBarItem" title="Headlines" id="mij-tu-emW" userLabel="Headlines"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MTc-Ob-xLc" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTA-Ut-EZ8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721" y="446"/>
-        </scene>
-        <!--About-->
-        <scene sceneID="hcQ-3F-QJX">
-            <objects>
-                <viewController id="J2S-Hq-IM9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MN2-P8-RFT"/>
-                        <viewControllerLayoutGuide type="bottom" id="vfW-X6-2Ii"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ffd-7L-P2H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i05-zh-gzE">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Infinnovation Stock Exchange Simulator" id="Nby-nH-mr1"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDQ-vg-Qrz">
-                                <rect key="frame" x="16" y="64" width="47" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="i05-zh-gzE" secondAttribute="trailing" id="5Op-a5-pKA"/>
-                            <constraint firstItem="i05-zh-gzE" firstAttribute="top" secondItem="MN2-P8-RFT" secondAttribute="bottom" id="CJN-9h-Db5"/>
-                            <constraint firstItem="i05-zh-gzE" firstAttribute="leading" secondItem="ffd-7L-P2H" secondAttribute="leading" id="dL5-1n-hEi"/>
-                            <constraint firstItem="sDQ-vg-Qrz" firstAttribute="leading" secondItem="ffd-7L-P2H" secondAttribute="leadingMargin" id="fhl-VB-MkH"/>
-                            <constraint firstItem="i05-zh-gzE" firstAttribute="bottom" secondItem="sDQ-vg-Qrz" secondAttribute="top" id="pSs-7w-kOG"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="About" id="Y7Q-Mc-7ci"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JW8-Py-cmP" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="566" y="737"/>
+            <point key="canvasLocation" x="1668" y="-446"/>
         </scene>
         <!--Details-->
-        <scene sceneID="9ai-g5-NMc">
+        <scene sceneID="gsY-MK-bJJ">
             <objects>
-                <viewController id="LFr-TG-xAm" userLabel="Details" sceneMemberID="viewController">
+                <viewController id="DHj-cs-DEp" userLabel="Details" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7ha-Jo-kRA"/>
-                        <viewControllerLayoutGuide type="bottom" id="Smq-7L-aa9"/>
+                        <viewControllerLayoutGuide type="top" id="7Qe-al-z70"/>
+                        <viewControllerLayoutGuide type="bottom" id="2o8-lp-Fsd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DLb-uI-5Ys">
+                    <view key="view" contentMode="scaleToFill" id="UoL-0T-grf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv8-FY-pkc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem title="Infinnovation Stock Exchange Simulator" id="ySE-Bz-14I"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftg-sM-ghp">
-                                <rect key="frame" x="16" y="64" width="53" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTJ-Lw-lHj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2jv-Ij-qaM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="DHj-cs-DEp" id="UvW-34-O55"/>
+                                            <outlet property="delegate" destination="DHj-cs-DEp" id="hHH-9t-pL2"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="centerX" secondItem="LTJ-Lw-lHj" secondAttribute="centerX" id="FC3-hM-7Xr"/>
+                                    <constraint firstAttribute="trailing" secondItem="2jv-Ij-qaM" secondAttribute="trailing" id="MjC-bg-J34"/>
+                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="leading" secondItem="LTJ-Lw-lHj" secondAttribute="leading" id="Tdb-Ju-CE9"/>
+                                    <constraint firstAttribute="bottom" secondItem="2jv-Ij-qaM" secondAttribute="bottom" id="Uqe-1F-2Uf"/>
+                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="top" secondItem="LTJ-Lw-lHj" secondAttribute="top" id="Z2k-Cm-qfo"/>
+                                    <constraint firstItem="2jv-Ij-qaM" firstAttribute="centerY" secondItem="LTJ-Lw-lHj" secondAttribute="centerY" id="frW-TP-JpG"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-XU-Qrw" userLabel="Heading">
+                                <rect key="frame" x="52" y="30" width="271" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fv8-FY-pkc" firstAttribute="top" secondItem="7ha-Jo-kRA" secondAttribute="bottom" id="3ri-p0-wsT"/>
-                            <constraint firstItem="fv8-FY-pkc" firstAttribute="leading" secondItem="DLb-uI-5Ys" secondAttribute="leading" id="Nre-cH-xbb"/>
-                            <constraint firstItem="fv8-FY-pkc" firstAttribute="bottom" secondItem="ftg-sM-ghp" secondAttribute="top" id="Put-dV-gYg"/>
-                            <constraint firstAttribute="trailing" secondItem="fv8-FY-pkc" secondAttribute="trailing" id="UEh-lA-Cse"/>
-                            <constraint firstItem="ftg-sM-ghp" firstAttribute="leading" secondItem="DLb-uI-5Ys" secondAttribute="leadingMargin" id="vcg-KH-bZf"/>
+                            <constraint firstItem="LTJ-Lw-lHj" firstAttribute="leading" secondItem="UoL-0T-grf" secondAttribute="leadingMargin" constant="-16" id="0fy-pN-XtW"/>
+                            <constraint firstItem="XUa-XU-Qrw" firstAttribute="centerX" secondItem="UoL-0T-grf" secondAttribute="centerX" id="4GA-5E-a2L"/>
+                            <constraint firstItem="2o8-lp-Fsd" firstAttribute="top" secondItem="LTJ-Lw-lHj" secondAttribute="bottom" id="9rK-2M-9x4"/>
+                            <constraint firstItem="LTJ-Lw-lHj" firstAttribute="top" secondItem="XUa-XU-Qrw" secondAttribute="bottom" constant="16" id="BqU-tN-jRM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LTJ-Lw-lHj" secondAttribute="trailing" constant="-16" id="KNj-VX-QUf"/>
+                            <constraint firstItem="XUa-XU-Qrw" firstAttribute="top" secondItem="7Qe-al-z70" secondAttribute="bottom" constant="10" id="L7e-9C-Bt8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Details" id="bdA-S1-NqU" userLabel="Details"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="Lwe-2X-bBH" userLabel="Home"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yuw-H2-OMc" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOe-JT-eOb" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-341"/>
+            <point key="canvasLocation" x="972" y="858"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="pbP-tN-R8b">
+            <objects>
+                <viewController id="ocB-qs-BB0" userLabel="About" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o0I-hI-vsF"/>
+                        <viewControllerLayoutGuide type="bottom" id="oB6-K3-MWg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X34-ay-mNq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktx-K2-L22">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xq-oj-qgv" userLabel="Heading">
+                                <rect key="frame" x="52" y="30" width="271" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ktx-K2-L22" secondAttribute="trailing" constant="-16" id="BT0-1p-m7T"/>
+                            <constraint firstItem="0Xq-oj-qgv" firstAttribute="centerX" secondItem="X34-ay-mNq" secondAttribute="centerX" id="BmI-vm-hIc"/>
+                            <constraint firstItem="oB6-K3-MWg" firstAttribute="top" secondItem="ktx-K2-L22" secondAttribute="bottom" id="Cjo-vh-kSK"/>
+                            <constraint firstItem="ktx-K2-L22" firstAttribute="leading" secondItem="X34-ay-mNq" secondAttribute="leadingMargin" constant="-16" id="aZD-wY-EOk"/>
+                            <constraint firstItem="0Xq-oj-qgv" firstAttribute="top" secondItem="o0I-hI-vsF" secondAttribute="bottom" constant="10" id="uNN-3J-RLR"/>
+                            <constraint firstItem="ktx-K2-L22" firstAttribute="top" secondItem="0Xq-oj-qgv" secondAttribute="bottom" constant="16" id="zUh-Kf-j0g"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" id="mQZ-Rx-2AF" userLabel="About"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sZd-1h-cXE" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="506"/>
         </scene>
     </scenes>
 </document>
