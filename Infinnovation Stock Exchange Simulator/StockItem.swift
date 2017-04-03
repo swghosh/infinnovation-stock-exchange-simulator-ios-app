@@ -1,12 +1,12 @@
 //
-//  StockDataModel.swift
+//  StockItem.swift
 //  InfiSES
 //
 //  Created by SwG Ghosh on 31/03/17.
 //  Copyright © 2017 codecrafts. All rights reserved.
 //
 
-class Stock {
+class StockItem {
     
     var name: String
     var current: Int

@@ -33,7 +33,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lL3-ak-Gql" id="YvC-8M-5PW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caM-q9-oxK" userLabel="SectorName">
@@ -56,11 +56,11 @@
                                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLy-yK-sUB" id="WxL-WE-RDv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infosys" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yah-Vr-sZt" userLabel="Name">
-                                                            <rect key="frame" x="17" y="11" width="57.5" height="21.5"/>
+                                                            <rect key="frame" x="18" y="11" width="57.5" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -85,12 +85,12 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="INR 450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivu-uY-wXf" userLabel="Current">
                                                             <rect key="frame" x="234" y="13" width="53" height="17"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="yah-Vr-sZt" firstAttribute="leading" secondItem="WxL-WE-RDv" secondAttribute="leadingMargin" constant="9" id="EvN-Xe-K5B"/>
+                                                        <constraint firstItem="yah-Vr-sZt" firstAttribute="leading" secondItem="WxL-WE-RDv" secondAttribute="leadingMargin" constant="10" id="EvN-Xe-K5B"/>
                                                         <constraint firstItem="REc-Ij-n0b" firstAttribute="top" secondItem="WxL-WE-RDv" secondAttribute="topMargin" constant="-5" id="QdO-Lp-Q8Q"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="REc-Ij-n0b" secondAttribute="trailing" constant="20" id="TvZ-jv-CLi"/>
                                                         <constraint firstItem="REc-Ij-n0b" firstAttribute="leading" secondItem="ivu-uY-wXf" secondAttribute="trailing" id="WJA-Rn-KH5"/>
@@ -131,7 +131,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-Gt-77h" userLabel="Heading">
                                 <rect key="frame" x="53" y="30" width="270.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -166,6 +166,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Foe-xD-gLE"/>
+                        <segue destination="O9Y-D7-Ok3" kind="relationship" relationship="viewControllers" id="hb7-QP-QZP"/>
                         <segue destination="hdJ-3T-Vcj" kind="relationship" relationship="viewControllers" id="Goq-Fs-W3n"/>
                         <segue destination="ocB-qs-BB0" kind="relationship" relationship="viewControllers" id="MGR-kw-ph7"/>
                     </connections>
@@ -197,7 +198,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tfA-fr-sKk" id="uJ1-8G-IHv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/04/2017 23:42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9p-nU-pmx" userLabel="Date">
@@ -250,7 +251,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRk-YG-bwY" userLabel="Heading">
                                 <rect key="frame" x="52" y="30" width="271" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-ZJ-cW5">
@@ -293,26 +294,11 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktx-K2-L22">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6AT-DM-mI8">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <sections/>
-                                    </tableView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6AT-DM-mI8" secondAttribute="bottom" id="5Gj-rq-Mqc"/>
-                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="top" secondItem="ktx-K2-L22" secondAttribute="top" id="Dgg-je-v0A"/>
-                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="centerY" secondItem="ktx-K2-L22" secondAttribute="centerY" id="PlQ-JV-CMQ"/>
-                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="leading" secondItem="ktx-K2-L22" secondAttribute="leading" id="RJb-Il-gRX"/>
-                                    <constraint firstItem="6AT-DM-mI8" firstAttribute="centerX" secondItem="ktx-K2-L22" secondAttribute="centerX" id="htS-zR-y7M"/>
-                                    <constraint firstAttribute="trailing" secondItem="6AT-DM-mI8" secondAttribute="trailing" id="pRm-V3-EZr"/>
-                                </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Xq-oj-qgv" userLabel="Heading">
                                 <rect key="frame" x="52" y="30" width="271" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -330,11 +316,149 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZd-1h-cXE" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="505.99700149925042"/>
+            <point key="canvasLocation" x="993" y="884"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="TjH-Qf-lNA">
+            <objects>
+                <viewController id="O9Y-D7-Ok3" customClass="DetailsViewController" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bNB-9u-L1w"/>
+                        <viewControllerLayoutGuide type="bottom" id="QAh-f8-bKQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uVB-yz-CWS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iX9-AW-LQM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2b-EF-wQa">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Detail" rowHeight="200" id="lWz-2o-jah" customClass="DetailedStockTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lWz-2o-jah" id="Ntl-ms-mkz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="INR 450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxz-RK-Y4P" userLabel="Current">
+                                                            <rect key="frame" x="233" y="16" width="53" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9PM-fk-XaB">
+                                                            <rect key="frame" x="287" y="8" width="60" height="32"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="🔻INR 20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpL-Ul-QNE" userLabel="Difference">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="13.4%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvW-EG-q1p" userLabel="Percentage">
+                                                                    <rect key="frame" x="12.5" y="16" width="35.5" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-Pq-t2t">
+                                                            <rect key="frame" x="18" y="47" width="339" height="101.5"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment>
+                                                                    <string key="content">Bajaj Auto Limited is an Indian two-wheeler and three-wheeler manufacturing company. Bajaj Auto manufactures and sells motorcycles, scooters andauto rickshaws. Bajaj Auto is a part of the Bajaj Group.</string>
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bajaj Auto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEf-bb-3hf" userLabel="Name">
+                                                            <rect key="frame" x="18" y="14" width="81" height="21.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="9PM-fk-XaB" secondAttribute="trailing" constant="20" id="1VI-sC-EWA"/>
+                                                        <constraint firstItem="dEf-bb-3hf" firstAttribute="leading" secondItem="Ntl-ms-mkz" secondAttribute="leadingMargin" constant="10" id="6Sy-wp-QfD"/>
+                                                        <constraint firstAttribute="topMargin" secondItem="9PM-fk-XaB" secondAttribute="top" id="Gh3-8P-dtE"/>
+                                                        <constraint firstItem="Oxz-RK-Y4P" firstAttribute="top" secondItem="Ntl-ms-mkz" secondAttribute="topMargin" constant="8" id="IBN-mT-xNc"/>
+                                                        <constraint firstItem="9PM-fk-XaB" firstAttribute="leading" secondItem="Oxz-RK-Y4P" secondAttribute="trailing" constant="1" id="Iz1-Fr-6f3"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="tBN-Pq-t2t" secondAttribute="trailing" constant="10" id="OGz-sR-C4S"/>
+                                                        <constraint firstItem="tBN-Pq-t2t" firstAttribute="leading" secondItem="Ntl-ms-mkz" secondAttribute="leadingMargin" constant="10" id="cUO-w1-YNU"/>
+                                                        <constraint firstItem="tBN-Pq-t2t" firstAttribute="top" secondItem="dEf-bb-3hf" secondAttribute="bottom" constant="12" id="g0l-mN-lTr"/>
+                                                        <constraint firstItem="dEf-bb-3hf" firstAttribute="top" secondItem="Ntl-ms-mkz" secondAttribute="topMargin" constant="6" id="ptN-A7-Vbm"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="current" destination="Oxz-RK-Y4P" id="Fl7-pA-Wx2"/>
+                                                    <outlet property="difference" destination="ZpL-Ul-QNE" id="6sc-m0-7eL"/>
+                                                    <outlet property="name" destination="dEf-bb-3hf" id="DtX-1D-uMd"/>
+                                                    <outlet property="percentage" destination="FvW-EG-q1p" id="uEQ-Mq-KLx"/>
+                                                    <outlet property="profile" destination="tBN-Pq-t2t" id="kN1-fv-Zud"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="O9Y-D7-Ok3" id="W5y-Wm-f0b"/>
+                                            <outlet property="delegate" destination="O9Y-D7-Ok3" id="L4q-kK-dWh"/>
+                                        </connections>
+                                    </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="G9d-KR-l55">
+                                        <rect key="frame" x="169" y="258.5" width="37" height="37"/>
+                                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="G9d-KR-l55" firstAttribute="centerY" secondItem="iX9-AW-LQM" secondAttribute="centerY" id="3Sc-ig-2OY"/>
+                                    <constraint firstAttribute="trailing" secondItem="p2b-EF-wQa" secondAttribute="trailing" id="8IF-hf-RRs"/>
+                                    <constraint firstItem="p2b-EF-wQa" firstAttribute="centerY" secondItem="iX9-AW-LQM" secondAttribute="centerY" id="A6j-w6-EQY"/>
+                                    <constraint firstItem="p2b-EF-wQa" firstAttribute="top" secondItem="iX9-AW-LQM" secondAttribute="top" id="ded-Ir-U2k"/>
+                                    <constraint firstItem="p2b-EF-wQa" firstAttribute="leading" secondItem="iX9-AW-LQM" secondAttribute="leading" id="gab-30-rEK"/>
+                                    <constraint firstAttribute="bottom" secondItem="p2b-EF-wQa" secondAttribute="bottom" id="lng-Gv-M18"/>
+                                    <constraint firstItem="p2b-EF-wQa" firstAttribute="centerX" secondItem="iX9-AW-LQM" secondAttribute="centerX" id="o11-A9-Byx"/>
+                                    <constraint firstItem="G9d-KR-l55" firstAttribute="centerX" secondItem="iX9-AW-LQM" secondAttribute="centerX" id="pvb-Zg-LGd"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr6-Z9-wef" userLabel="Heading">
+                                <rect key="frame" x="52" y="30" width="271" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="iX9-AW-LQM" secondAttribute="trailing" constant="-16" id="TWv-mo-wAy"/>
+                            <constraint firstItem="QAh-f8-bKQ" firstAttribute="top" secondItem="iX9-AW-LQM" secondAttribute="bottom" id="eaF-Py-e5m"/>
+                            <constraint firstItem="iX9-AW-LQM" firstAttribute="leading" secondItem="uVB-yz-CWS" secondAttribute="leadingMargin" constant="-16" id="fU4-WB-tgd"/>
+                            <constraint firstItem="iX9-AW-LQM" firstAttribute="top" secondItem="hr6-Z9-wef" secondAttribute="bottom" constant="16" id="fh3-eH-Zu9"/>
+                            <constraint firstItem="hr6-Z9-wef" firstAttribute="centerX" secondItem="uVB-yz-CWS" secondAttribute="centerX" id="vhs-ef-M7G"/>
+                            <constraint firstItem="hr6-Z9-wef" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" constant="10" id="w5j-Z8-Q0D"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Details" image="DetailsIcon" id="2aV-ey-W4I" userLabel="Details"/>
+                    <connections>
+                        <outlet property="activity" destination="G9d-KR-l55" id="n4n-XC-j46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmg-lK-I8f" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1668" y="312.59370314842579"/>
         </scene>
     </scenes>
     <resources>
         <image name="AboutIcon" width="30" height="30"/>
+        <image name="DetailsIcon" width="30" height="30"/>
         <image name="HomeIcon" width="30" height="30"/>
         <image name="NewsIcon" width="30" height="30"/>
     </resources>
