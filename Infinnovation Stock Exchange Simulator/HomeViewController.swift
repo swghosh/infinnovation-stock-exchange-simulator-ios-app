@@ -1,9 +1,9 @@
 //
 //  ViewController.swift
-//  InfiSES
+//  Infinnovation Stock Exchange Simulator
 //
 //  Created by SwG Ghosh on 29/03/17.
-//  Copyright © 2017 codecrafts. All rights reserved.
+//  Copyright © 2017 infinnovation. All rights reserved.
 //
 
 import UIKit

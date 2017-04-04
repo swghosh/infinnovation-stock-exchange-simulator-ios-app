@@ -1,9 +1,9 @@
 //
 //  StockItem.swift
-//  InfiSES
+//  Infinnovation Stock Exchange Simulator
 //
 //  Created by SwG Ghosh on 31/03/17.
-//  Copyright © 2017 codecrafts. All rights reserved.
+//  Copyright © 2017 infinnovation. All rights reserved.
 //
 
 class StockItem {
