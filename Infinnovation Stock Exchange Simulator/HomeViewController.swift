@@ -12,7 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
-    var stocks: [StockItem] = [StockItem(name: "ACC", current: 899, difference: -90, percentage: -3.5, sector: "Cement"), StockItem(name: "Apple", current: 899, difference: 90, percentage: 3.5, sector: "Information Technology"), StockItem(name: "ACC", current: 899, difference: -90, percentage: -3.5, sector: "Cement")]
+    var stocks: [StockItem] = [StockItem(name: "Apple Inc.", current: 899, difference: -90, percentage: -3.5, sector: "Information Technology"), StockItem(name: "RedHat Inc.", current: 899, difference: 90, percentage: 3.5, sector: "Information Technology"), StockItem(name: "Facebook Inc.", current: 899, difference: -90, percentage: -3.5, sector: "Information Technology"), StockItem(name: "Amazon India LLC", current: 899, difference: -90, percentage: -3.5, sector: "Information Technology")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

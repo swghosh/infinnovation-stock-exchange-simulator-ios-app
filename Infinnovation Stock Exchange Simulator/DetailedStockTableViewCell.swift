@@ -10,6 +10,7 @@ import UIKit
 
 class DetailedStockTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sector: UILabel!
     @IBOutlet weak var profile: UILabel!
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var difference: UILabel!

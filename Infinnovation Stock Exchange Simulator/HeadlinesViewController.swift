@@ -40,7 +40,9 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        tableView.estimatedRowHeight = 70.0
+        let height = UITableViewAutomaticDimension
+        return height
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
