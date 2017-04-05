@@ -119,14 +119,22 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UE3-47-6q9" userLabel="Time">
+                                <rect key="frame" x="262" y="20" width="97" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FQh-39-qJ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1pb-jT-ffc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FQh-39-qJ2" secondAttribute="bottom" id="2E8-hB-UBM"/>
+                            <constraint firstItem="UE3-47-6q9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8iC-8K-PvC"/>
                             <constraint firstItem="WYz-Gt-77h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="EMb-a9-JkI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FQh-39-qJ2" secondAttribute="trailing" constant="-16" id="Gu9-Ch-Il8"/>
                             <constraint firstItem="FQh-39-qJ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="Kcx-RP-zHj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UE3-47-6q9" secondAttribute="trailing" id="Vea-9T-8Qh"/>
                             <constraint firstItem="CNU-fw-1gC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvX-aw-HQE"/>
                             <constraint firstItem="WYz-Gt-77h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pwe-XH-RhN"/>
                             <constraint firstItem="CNU-fw-1gC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAA-7z-4wa"/>
@@ -136,6 +144,7 @@
                     <navigationItem key="navigationItem" id="Epw-Pk-Wqd"/>
                     <connections>
                         <outlet property="activity" destination="CNU-fw-1gC" id="sgY-KN-clz"/>
+                        <outlet property="time" destination="UE3-47-6q9" id="acA-d9-oy2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -192,7 +201,7 @@
                                                     <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-Tt-3rY" userLabel="News">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8D-Tt-3rY" userLabel="News">
                                                     <rect key="frame" x="18" y="29.5" width="339" height="19.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="This is a sample news item.">
@@ -234,6 +243,12 @@
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8Z-fQ-e6h" userLabel="Time">
+                                <rect key="frame" x="262" y="20" width="97" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -242,14 +257,17 @@
                             <constraint firstItem="x6v-lk-ZOu" firstAttribute="top" secondItem="cg8-vV-UzW" secondAttribute="bottom" id="7cG-lT-Q7v"/>
                             <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="8ni-Bv-XkR"/>
                             <constraint firstItem="cg8-vV-UzW" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="36" id="9c3-ix-td2"/>
+                            <constraint firstItem="y8Z-fQ-e6h" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" id="TVU-3j-jY9"/>
                             <constraint firstItem="RRk-YG-bwY" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="TzA-K5-5Ll"/>
                             <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerY" secondItem="kAD-ix-xPo" secondAttribute="centerY" id="WPD-Zh-LeV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y8Z-fQ-e6h" secondAttribute="trailing" id="d1d-Ta-yaQ"/>
                             <constraint firstItem="RRk-YG-bwY" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="10" id="obk-xU-d5p"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Headlines" image="NewsIcon" id="mij-tu-emW" userLabel="Headlines"/>
                     <connections>
                         <outlet property="activity" destination="8TB-ZJ-cW5" id="WK0-pw-4zm"/>
+                        <outlet property="time" destination="y8Z-fQ-e6h" id="qib-s2-L7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HTA-Ut-EZ8" sceneMemberID="firstResponder"/>
@@ -482,7 +500,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-Pq-t2t">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBN-Pq-t2t">
                                                     <rect key="frame" x="18" y="68" width="339" height="101.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
@@ -548,10 +566,18 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-bD-QSi" userLabel="Time">
+                                <rect key="frame" x="262" y="20" width="97" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wWh-bD-QSi" secondAttribute="trailing" id="7PJ-hN-KS7"/>
                             <constraint firstItem="G9d-KR-l55" firstAttribute="centerX" secondItem="uVB-yz-CWS" secondAttribute="centerX" id="8qg-Hj-1iu"/>
+                            <constraint firstItem="wWh-bD-QSi" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" id="J1y-Zg-BmI"/>
                             <constraint firstItem="p2b-EF-wQa" firstAttribute="leading" secondItem="uVB-yz-CWS" secondAttribute="leadingMargin" constant="-16" id="TRo-Eq-hxp"/>
                             <constraint firstItem="p2b-EF-wQa" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" constant="36" id="gXx-8m-ReM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p2b-EF-wQa" secondAttribute="trailing" constant="-16" id="iZj-ma-tOH"/>
@@ -565,6 +591,7 @@
                     <navigationItem key="navigationItem" id="gji-D0-v2u"/>
                     <connections>
                         <outlet property="activity" destination="G9d-KR-l55" id="n4n-XC-j46"/>
+                        <outlet property="time" destination="wWh-bD-QSi" id="dAy-1c-jkg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmg-lK-I8f" sceneMemberID="firstResponder"/>

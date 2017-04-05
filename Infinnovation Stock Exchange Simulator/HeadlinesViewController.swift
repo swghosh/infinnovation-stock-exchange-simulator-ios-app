@@ -10,6 +10,7 @@ import UIKit
 
 class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var time: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
     var news: [NewsItem] = [
