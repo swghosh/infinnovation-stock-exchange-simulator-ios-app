@@ -16,7 +16,16 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
         activity.stopAnimating()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // disables the navigation bar
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +48,11 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.estimatedRowHeight = 170.0
         let height = UITableViewAutomaticDimension
         return height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let segueIdentifier = "FullStockFromDetails"
+        performSegue(withIdentifier: segueIdentifier, sender: stocks[indexPath.row])
     }
     
     func getDetailedStockCell(_ tableView: UITableView, index: Int) -> DetailedStockTableViewCell {
@@ -64,14 +78,18 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
-    /*
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "FullStockFromDetails" {
+            let destinationViewController = segue.destination as! FullStockViewController
+            destinationViewController.stock = sender as! DetailedStockItem
+        }
     }
-    */
 
 }

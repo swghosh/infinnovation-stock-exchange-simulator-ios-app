@@ -19,6 +19,7 @@
 		C81C69611E902CBF00F2B4C4 /* SectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695D1E902CBF00F2B4C4 /* SectorTableViewCell.swift */; };
 		C81C69621E902CBF00F2B4C4 /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695E1E902CBF00F2B4C4 /* StockItem.swift */; };
 		C81C69631E902CBF00F2B4C4 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */; };
+		C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839523F1E95387000EBD934 /* FullStockViewController.swift */; };
 		C8D5DB861E915B5F005A4F41 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */; };
 		C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */; };
 		C8D5DB8A1E9185EF005A4F41 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */; };
@@ -39,6 +40,7 @@
 		C81C695D1E902CBF00F2B4C4 /* SectorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorTableViewCell.swift; sourceTree = "<group>"; };
 		C81C695E1E902CBF00F2B4C4 /* StockItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
 		C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		C839523F1E95387000EBD934 /* FullStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStockViewController.swift; sourceTree = "<group>"; };
 		C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
 		C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */,
 				C800589E1E9292AA0017FEB0 /* NewsItem.swift */,
 				C812034D1D8DCC4E00A89DE0 /* Main.storyboard */,
+				C839523F1E95387000EBD934 /* FullStockViewController.swift */,
 				C80058A21E929C6D0017FEB0 /* DetailedStockTableViewCell.swift */,
 				C80058A01E9296210017FEB0 /* DetailedStockItem.swift */,
 				C800589C1E92898C0017FEB0 /* DetailsViewController.swift */,
@@ -126,7 +129,6 @@
 				TargetAttributes = {
 					C81203451D8DCC4D00A89DE0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 687NW7TG3Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -171,6 +173,7 @@
 				C800589F1E9292AA0017FEB0 /* NewsItem.swift in Sources */,
 				C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */,
 				C800589D1E92898C0017FEB0 /* DetailsViewController.swift in Sources */,
+				C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */,
 				C80058A31E929C6D0017FEB0 /* DetailedStockTableViewCell.swift in Sources */,
 				C812034A1D8DCC4E00A89DE0 /* AppDelegate.swift in Sources */,
 				C80058A11E9296210017FEB0 /* DetailedStockItem.swift in Sources */,
@@ -304,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
@@ -320,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
