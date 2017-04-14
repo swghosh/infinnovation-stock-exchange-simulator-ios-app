@@ -17,7 +17,8 @@ class FullStockViewController: UIViewController {
     @IBOutlet weak var current: UILabel!
     @IBOutlet weak var difference: UILabel!
     @IBOutlet weak var percentage: UILabel!
-    @IBOutlet var profile: UILabel!
+    @IBOutlet weak var profile: UILabel!
+    @IBOutlet weak var sector: UILabel!
     
     @IBOutlet weak var pclose: UILabel!
     @IBOutlet weak var ovalue: UILabel!
@@ -33,21 +34,26 @@ class FullStockViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if(detailedStock == nil) {
+            detailedStock = getDetailedStockItem()
+        }
+        
         var triangle = "▼"
         
         difference.textColor = .red
         
-        if(stock!.gain) {
+        if(detailedStock!.gain) {
             difference.textColor = .green
             triangle = "▲"
         }
         
-        name.text = stock!.name
-        current.text = "₹\(stock!.current)"
-        difference.text = "\(triangle) ₹\(stock!.difference)"
-        percentage.text = "\(stock!.percentage)%"
+        name.text = detailedStock!.name
+        current.text = "₹\(detailedStock!.current)"
+        difference.text = "\(triangle) ₹\(detailedStock!.difference)"
+        percentage.text = "\(detailedStock!.percentage)%"
+        sector.text = "\(detailedStock!.sector)"
         
-        detailedStock = getDetailedStockItem()
         profile.text = "\(detailedStock!.profile)"
         pclose.text = "₹\(detailedStock!.pclose)"
         ovalue.text = "₹\(detailedStock!.ovalue)"
@@ -67,7 +73,8 @@ class FullStockViewController: UIViewController {
     }
     
     func getDetailedStockItem() -> DetailedStockItem {
-        return stock as! DetailedStockItem
+        let newStock =  DetailedStockItem(name: "Company", current: 0, difference: 0, percentage: 0, sector: "Sector", profile: "", pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+        return newStock
     }
 
     override func didReceiveMemoryWarning() {

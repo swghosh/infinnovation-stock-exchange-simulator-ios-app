@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -88,7 +89,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Pass the selected object to the new view controller.
         if segue.identifier == "FullStockFromDetails" {
             let destinationViewController = segue.destination as! FullStockViewController
-            destinationViewController.stock = sender as! DetailedStockItem
+            destinationViewController.detailedStock = sender as? DetailedStockItem
+            destinationViewController.stock = sender as? StockItem
         }
     }
 
