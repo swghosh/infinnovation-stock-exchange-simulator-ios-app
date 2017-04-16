@@ -20,6 +20,9 @@
 		C81C69621E902CBF00F2B4C4 /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695E1E902CBF00F2B4C4 /* StockItem.swift */; };
 		C81C69631E902CBF00F2B4C4 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */; };
 		C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839523F1E95387000EBD934 /* FullStockViewController.swift */; };
+		C852FE1E1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */; };
+		C852FE201EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */; };
+		C8B19B051EA2A77300326533 /* StocksListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B19B041EA2A77300326533 /* StocksListAPICall.swift */; };
 		C8C7C5B51E9F912C00598879 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7C5B41E9F912C00598879 /* InformationViewController.swift */; };
 		C8D5DB861E915B5F005A4F41 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */; };
 		C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */; };
@@ -42,6 +45,9 @@
 		C81C695E1E902CBF00F2B4C4 /* StockItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
 		C81C695F1E902CBF00F2B4C4 /* StockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
 		C839523F1E95387000EBD934 /* FullStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStockViewController.swift; sourceTree = "<group>"; };
+		C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksProfileListAPICall.swift; sourceTree = "<group>"; };
+		C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesListAPICall.swift; sourceTree = "<group>"; };
+		C8B19B041EA2A77300326533 /* StocksListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksListAPICall.swift; sourceTree = "<group>"; };
 		C8C7C5B41E9F912C00598879 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
 		C8D5DB871E91782E005A4F41 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 				C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */,
 				C800589E1E9292AA0017FEB0 /* NewsItem.swift */,
 				C812034D1D8DCC4E00A89DE0 /* Main.storyboard */,
+				C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */,
+				C8B19B041EA2A77300326533 /* StocksListAPICall.swift */,
+				C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */,
 				C8C7C5B41E9F912C00598879 /* InformationViewController.swift */,
 				C839523F1E95387000EBD934 /* FullStockViewController.swift */,
 				C80058A21E929C6D0017FEB0 /* DetailedStockTableViewCell.swift */,
@@ -133,7 +142,7 @@
 					C81203451D8DCC4D00A89DE0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 687NW7TG3Z;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -176,6 +185,7 @@
 				C81C69621E902CBF00F2B4C4 /* StockItem.swift in Sources */,
 				C800589F1E9292AA0017FEB0 /* NewsItem.swift in Sources */,
 				C8D5DB881E91782E005A4F41 /* NewsTableViewCell.swift in Sources */,
+				C852FE1E1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift in Sources */,
 				C800589D1E92898C0017FEB0 /* DetailsViewController.swift in Sources */,
 				C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */,
 				C80058A31E929C6D0017FEB0 /* DetailedStockTableViewCell.swift in Sources */,
@@ -184,6 +194,8 @@
 				C8D5DB861E915B5F005A4F41 /* HeadlinesViewController.swift in Sources */,
 				C8C7C5B51E9F912C00598879 /* InformationViewController.swift in Sources */,
 				C81C69601E902CBF00F2B4C4 /* HomeViewController.swift in Sources */,
+				C8B19B051EA2A77300326533 /* StocksListAPICall.swift in Sources */,
+				C852FE201EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift in Sources */,
 				C81C69631E902CBF00F2B4C4 /* StockTableViewCell.swift in Sources */,
 				C8D5DB8A1E9185EF005A4F41 /* AboutViewController.swift in Sources */,
 				C81C69611E902CBF00F2B4C4 /* SectorTableViewCell.swift in Sources */,
@@ -311,15 +323,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b88d95cd-7ddd-4b1a-9cf8-b8c36eb2321b";
-				PROVISIONING_PROFILE_SPECIFIER = InfiSESDistProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -327,15 +340,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 687NW7TG3Z;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Infinnovation Stock Exchange Simulator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.infinnovation.Infinnovation-Stock-Exchange-Simulator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b88d95cd-7ddd-4b1a-9cf8-b8c36eb2321b";
-				PROVISIONING_PROFILE_SPECIFIER = InfiSESDistProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

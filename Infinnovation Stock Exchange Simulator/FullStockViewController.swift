@@ -54,7 +54,7 @@ class FullStockViewController: UIViewController {
         percentage.text = "\(detailedStock!.percentage)%"
         sector.text = "\(detailedStock!.sector)"
         
-        profile.text = "\(detailedStock!.profile)"
+        profile.text = "\(detailedStock!.profile!)"
         pclose.text = "₹\(detailedStock!.pclose)"
         ovalue.text = "₹\(detailedStock!.ovalue)"
         lcircuit.text = "₹\(detailedStock!.lcircuit)"
@@ -73,7 +73,13 @@ class FullStockViewController: UIViewController {
     }
     
     func getDetailedStockItem() -> DetailedStockItem {
-        let newStock =  DetailedStockItem(name: "Company", current: 0, difference: 0, percentage: 0, sector: "Sector", profile: "", pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+        var newStock: DetailedStockItem
+        if(stock!.profile != nil) {
+            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: stock!.profile!, pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+        }
+        else {
+            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: "", pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+        }
         return newStock
     }
 

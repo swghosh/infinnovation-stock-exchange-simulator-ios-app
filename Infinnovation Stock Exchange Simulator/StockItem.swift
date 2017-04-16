@@ -14,6 +14,7 @@ class StockItem {
     var percentage: Double
     var gain: Bool
     var sector: String
+    var profile: String?
     
     init(name: String, current: Int, difference: Int, percentage: Double, sector: String) {
         self.name = name
@@ -31,6 +32,11 @@ class StockItem {
             self.gain = false
         }
         
+    }
+    
+     convenience init(name: String, current: Int, difference: Int, percentage: Double, sector: String, profile: String) {
+        self.init(name: name, current: current, difference: difference, percentage: percentage, sector: sector)
+        self.profile = profile
     }
     
 }

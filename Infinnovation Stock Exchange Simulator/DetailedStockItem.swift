@@ -8,7 +8,6 @@
 
 class DetailedStockItem: StockItem {
     
-    var profile: String
     var pclose: Int
     var ovalue: Int
     var lcircuit: Int
@@ -17,7 +16,6 @@ class DetailedStockItem: StockItem {
     var bvalue: Int
     
     init(name: String, current: Int, difference: Int, percentage: Double, sector: String, profile: String, pclose: Int, ovalue: Int, lcircuit: Int, ucircuit: Int, dividend: Int, bvalue: Int) {
-        self.profile = profile
         self.pclose = pclose
         self.ovalue = ovalue
         self.lcircuit = lcircuit
@@ -25,5 +23,6 @@ class DetailedStockItem: StockItem {
         self.dividend = dividend
         self.bvalue = bvalue
         super.init(name: name, current: current, difference: difference, percentage: percentage, sector: sector)
+        self.profile = profile
     }
 }
