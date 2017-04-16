@@ -18,7 +18,7 @@ class HeadlinesListAPICall {
     var news: [NewsItem]?
     var time: String?
     
-    func getStocksList(jsonData: Data) -> [NewsItem] {
+    func getHeadlinesList(jsonData: Data) -> [NewsItem] {
         news = [NewsItem]()
         do {
             let json = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions()) as? [String: Any]

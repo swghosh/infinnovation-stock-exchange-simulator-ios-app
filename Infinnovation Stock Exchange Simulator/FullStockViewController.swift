@@ -11,7 +11,7 @@ import UIKit
 class FullStockViewController: UIViewController {
     
     var stock: StockItem?
-    var detailedStock: DetailedStockItem?
+    var fullStock: FullStockItem?
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var current: UILabel!
@@ -35,32 +35,36 @@ class FullStockViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        if(detailedStock == nil) {
-            detailedStock = getDetailedStockItem()
-        }
+        // json response
+        let jsonString: String = "{\"time\":\"17/04/2017 00:59:29\",\"result\":{\"name\":\"ACC\",\"current\":1800,\"difference\":-150,\"percentage\":-9.09,\"sector\":\"Cement\",\"profile\":\"ACC Limited one of the largest producers of cement in India. It's registered office is called Cement House. It is located on Maharishi Karve Road, Mumbai. The stock price of company contributes in calculating BSE Sensex.The management control of company was taken over by Swiss cement major Holcim in 2004. On 1 September 2006 the name of The Associated Cement Companies Limited was changed to ACC Limited. The company is only cement company to get Superbrand status in India.\",\"pclose\":1650,\"ovalue\":1655,\"lcircuit\":1500,\"ucircuit\":1800,\"dividend\":170,\"bvalue\":450}}"
+        // serialise the json response into StockItem array
+        let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://infisesapitest-swghosh.rhcloud.com/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
+        fullStock = apiCall.getFullStock(jsonData: jsonString.data(using: .utf8)!)
+        
+        time.text = apiCall.time!
         
         var triangle = "▼"
         
         difference.textColor = .red
         
-        if(detailedStock!.gain) {
+        if(fullStock!.gain) {
             difference.textColor = .green
             triangle = "▲"
         }
         
-        name.text = detailedStock!.name
-        current.text = "₹\(detailedStock!.current)"
-        difference.text = "\(triangle) ₹\(detailedStock!.difference)"
-        percentage.text = "\(detailedStock!.percentage)%"
-        sector.text = "\(detailedStock!.sector)"
+        name.text = fullStock!.name
+        current.text = "₹\(fullStock!.current)"
+        difference.text = "\(triangle) ₹\(fullStock!.difference)"
+        percentage.text = "\(fullStock!.percentage)%"
+        sector.text = "\(fullStock!.sector)"
         
-        profile.text = "\(detailedStock!.profile!)"
-        pclose.text = "₹\(detailedStock!.pclose)"
-        ovalue.text = "₹\(detailedStock!.ovalue)"
-        lcircuit.text = "₹\(detailedStock!.lcircuit)"
-        ucircuit.text = "₹\(detailedStock!.ucircuit)"
-        dividend.text = "₹\(detailedStock!.dividend)"
-        bvalue.text = "₹\(detailedStock!.bvalue)"
+        profile.text = "\(fullStock!.profile!)"
+        pclose.text = "₹\(fullStock!.pclose)"
+        ovalue.text = "₹\(fullStock!.ovalue)"
+        lcircuit.text = "₹\(fullStock!.lcircuit)"
+        ucircuit.text = "₹\(fullStock!.ucircuit)"
+        dividend.text = "₹\(fullStock!.dividend)"
+        bvalue.text = "₹\(fullStock!.bvalue)"
         
         activity.stopAnimating()
         
@@ -70,17 +74,6 @@ class FullStockViewController: UIViewController {
         
         // enables the navigation bar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    func getDetailedStockItem() -> DetailedStockItem {
-        var newStock: DetailedStockItem
-        if(stock!.profile != nil) {
-            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: stock!.profile!, pclose: -1, ovalue: -1, lcircuit: -1, ucircuit: -1, dividend: -1, bvalue: -1)
-        }
-        else {
-            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: "", pclose: -1, ovalue: -1, lcircuit: -1, ucircuit: -1, dividend: -1, bvalue: -1)
-        }
-        return newStock
     }
 
     override func didReceiveMemoryWarning() {

@@ -23,14 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FQh-39-qJ2">
-                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Sector" id="lL3-ak-Gql" customClass="SectorTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lL3-ak-Gql" id="YvC-8M-5PW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caM-q9-oxK" userLabel="SectorName">
@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLy-yK-sUB" id="WxL-WE-RDv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infosys" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yah-Vr-sZt" userLabel="Name">
@@ -111,16 +111,16 @@
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-fw-1gC">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYz-Gt-77h" userLabel="Heading">
-                                <rect key="frame" x="53" y="74" width="270.5" height="18"/>
+                                <rect key="frame" x="52.5" y="74" width="270.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UE3-47-6q9" userLabel="Time">
-                                <rect key="frame" x="270.5" y="64" width="88.5" height="11"/>
+                                <rect key="frame" x="143" y="92" width="88.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -130,14 +130,14 @@
                         <constraints>
                             <constraint firstItem="FQh-39-qJ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1pb-jT-ffc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FQh-39-qJ2" secondAttribute="bottom" id="2E8-hB-UBM"/>
-                            <constraint firstItem="UE3-47-6q9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8iC-8K-PvC"/>
+                            <constraint firstItem="UE3-47-6q9" firstAttribute="top" secondItem="WYz-Gt-77h" secondAttribute="bottom" id="7yY-h0-9mn"/>
                             <constraint firstItem="WYz-Gt-77h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="EMb-a9-JkI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FQh-39-qJ2" secondAttribute="trailing" constant="-16" id="Gu9-Ch-Il8"/>
-                            <constraint firstItem="FQh-39-qJ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="Kcx-RP-zHj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UE3-47-6q9" secondAttribute="trailing" id="Vea-9T-8Qh"/>
+                            <constraint firstItem="FQh-39-qJ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="Kcx-RP-zHj"/>
                             <constraint firstItem="CNU-fw-1gC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvX-aw-HQE"/>
                             <constraint firstItem="WYz-Gt-77h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pwe-XH-RhN"/>
                             <constraint firstItem="CNU-fw-1gC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sAA-7z-4wa"/>
+                            <constraint firstItem="UE3-47-6q9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZX-XM-hih"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Epw-Pk-Wqd"/>
@@ -160,6 +160,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="whY-RT-elr" kind="relationship" relationship="viewControllers" id="Foe-xD-gLE"/>
@@ -185,14 +187,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cg8-vV-UzW">
-                                <rect key="frame" x="0.0" y="56" width="375" height="562"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="News" rowHeight="70" id="tfA-fr-sKk" customClass="NewsTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tfA-fr-sKk" id="uJ1-8G-IHv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/04/2017 23:42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9p-nU-pmx" userLabel="Date">
@@ -241,10 +243,10 @@
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8TB-ZJ-cW5">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8Z-fQ-e6h" userLabel="Time">
-                                <rect key="frame" x="270.5" y="20" width="88.5" height="11"/>
+                                <rect key="frame" x="143" y="48" width="88.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -256,11 +258,11 @@
                             <constraint firstItem="cg8-vV-UzW" firstAttribute="leading" secondItem="kAD-ix-xPo" secondAttribute="leadingMargin" constant="-16" id="6Fy-vC-c8v"/>
                             <constraint firstItem="x6v-lk-ZOu" firstAttribute="top" secondItem="cg8-vV-UzW" secondAttribute="bottom" id="7cG-lT-Q7v"/>
                             <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="8ni-Bv-XkR"/>
-                            <constraint firstItem="cg8-vV-UzW" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="36" id="9c3-ix-td2"/>
-                            <constraint firstItem="y8Z-fQ-e6h" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" id="TVU-3j-jY9"/>
+                            <constraint firstItem="cg8-vV-UzW" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="45" id="9c3-ix-td2"/>
+                            <constraint firstItem="y8Z-fQ-e6h" firstAttribute="top" secondItem="RRk-YG-bwY" secondAttribute="bottom" id="IlU-yd-cx9"/>
+                            <constraint firstItem="y8Z-fQ-e6h" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="L3T-MI-9BU"/>
                             <constraint firstItem="RRk-YG-bwY" firstAttribute="centerX" secondItem="kAD-ix-xPo" secondAttribute="centerX" id="TzA-K5-5Ll"/>
                             <constraint firstItem="8TB-ZJ-cW5" firstAttribute="centerY" secondItem="kAD-ix-xPo" secondAttribute="centerY" id="WPD-Zh-LeV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="y8Z-fQ-e6h" secondAttribute="trailing" id="d1d-Ta-yaQ"/>
                             <constraint firstItem="RRk-YG-bwY" firstAttribute="top" secondItem="EuO-91-3bf" secondAttribute="bottom" constant="10" id="obk-xU-d5p"/>
                         </constraints>
                     </view>
@@ -287,14 +289,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2b-EF-wQa">
-                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Detail" rowHeight="190" id="lWz-2o-jah" customClass="DetailedStockTableViewCell" customModule="Infinnovation_Stock_Exchange_Simulator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lWz-2o-jah" id="Ntl-ms-mkz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="189"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="INR 450" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxz-RK-Y4P" userLabel="Current">
@@ -378,7 +380,7 @@
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="G9d-KR-l55">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hr6-Z9-wef" userLabel="Heading">
                                 <rect key="frame" x="52" y="74" width="271" height="18"/>
@@ -387,7 +389,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016 12:19:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWh-bD-QSi" userLabel="Time">
-                                <rect key="frame" x="270.5" y="64" width="88.5" height="11"/>
+                                <rect key="frame" x="143" y="92" width="88.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -395,11 +397,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wWh-bD-QSi" secondAttribute="trailing" id="7PJ-hN-KS7"/>
                             <constraint firstItem="G9d-KR-l55" firstAttribute="centerX" secondItem="uVB-yz-CWS" secondAttribute="centerX" id="8qg-Hj-1iu"/>
-                            <constraint firstItem="wWh-bD-QSi" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" id="J1y-Zg-BmI"/>
+                            <constraint firstItem="wWh-bD-QSi" firstAttribute="centerX" secondItem="uVB-yz-CWS" secondAttribute="centerX" id="9WT-3d-Glj"/>
+                            <constraint firstItem="wWh-bD-QSi" firstAttribute="top" secondItem="hr6-Z9-wef" secondAttribute="bottom" id="NkI-fk-4FY"/>
                             <constraint firstItem="p2b-EF-wQa" firstAttribute="leading" secondItem="uVB-yz-CWS" secondAttribute="leadingMargin" constant="-16" id="TRo-Eq-hxp"/>
-                            <constraint firstItem="p2b-EF-wQa" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" constant="36" id="gXx-8m-ReM"/>
+                            <constraint firstItem="p2b-EF-wQa" firstAttribute="top" secondItem="bNB-9u-L1w" secondAttribute="bottom" constant="45" id="gXx-8m-ReM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="p2b-EF-wQa" secondAttribute="trailing" constant="-16" id="iZj-ma-tOH"/>
                             <constraint firstItem="QAh-f8-bKQ" firstAttribute="top" secondItem="p2b-EF-wQa" secondAttribute="bottom" id="kP6-jT-Lld"/>
                             <constraint firstItem="G9d-KR-l55" firstAttribute="centerY" secondItem="uVB-yz-CWS" secondAttribute="centerY" id="tuN-7d-T2P"/>
@@ -619,10 +621,10 @@
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="H5f-uD-P6I">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCx-Ee-2yy" userLabel="Heading">
-                                <rect key="frame" x="184" y="88" width="174" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFINNOVATION STOCK EXCHANGE SIMULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCx-Ee-2yy" userLabel="Heading">
+                                <rect key="frame" x="143.5" y="88" width="214.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -677,7 +679,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RSh-io-LYl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Details" image="DetailsIcon" id="2aV-ey-W4I" userLabel="Details"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uyf-lq-nyU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uyf-lq-nyU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -698,7 +700,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="whY-RT-elr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" id="gP3-Ae-iKP" userLabel="Home"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="54I-NN-lTJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="54I-NN-lTJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -743,8 +745,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinnovation Stock Exchange Simulator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52s-Sw-Soz" userLabel="Heading">
-                                <rect key="frame" x="185" y="77" width="174" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFINNOVATION STOCK EXCHANGE SIMULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52s-Sw-Soz" userLabel="Heading">
+                                <rect key="frame" x="144.5" y="77" width="214.5" height="11"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -818,18 +820,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-DH-MJW">
-                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Basic" textLabel="Vbf-Cb-gqh" style="IBUITableViewCellStyleDefault" id="1BR-ru-JgR" userLabel="Cell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1BR-ru-JgR" id="49s-CI-q5X">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="License" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vbf-Cb-gqh" userLabel="Label">
-                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -854,7 +856,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oXW-Gr-Zo1" firstAttribute="top" secondItem="wr9-DH-MJW" secondAttribute="bottom" id="0H4-Ks-7m6"/>
-                            <constraint firstItem="wr9-DH-MJW" firstAttribute="top" secondItem="qy1-xv-Thv" secondAttribute="bottom" constant="36" id="Gjs-gy-uIc"/>
+                            <constraint firstItem="wr9-DH-MJW" firstAttribute="top" secondItem="qy1-xv-Thv" secondAttribute="bottom" constant="45" id="Gjs-gy-uIc"/>
                             <constraint firstItem="ZIK-FE-hzX" firstAttribute="top" secondItem="qy1-xv-Thv" secondAttribute="bottom" constant="10" id="KNV-dR-ghM"/>
                             <constraint firstItem="ZIK-FE-hzX" firstAttribute="centerX" secondItem="XrF-yJ-sJa" secondAttribute="centerX" id="eTh-WW-zcF"/>
                             <constraint firstItem="wr9-DH-MJW" firstAttribute="leading" secondItem="XrF-yJ-sJa" secondAttribute="leadingMargin" constant="-16" id="fjf-un-36T"/>
@@ -876,7 +878,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Txa-TA-FLq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="3" title="About" image="AboutIcon" id="L5m-Al-TOk" userLabel="Headlines"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6pK-1Q-6gu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6pK-1Q-6gu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
