@@ -75,10 +75,10 @@ class FullStockViewController: UIViewController {
     func getDetailedStockItem() -> DetailedStockItem {
         var newStock: DetailedStockItem
         if(stock!.profile != nil) {
-            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: stock!.profile!, pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: stock!.profile!, pclose: -1, ovalue: -1, lcircuit: -1, ucircuit: -1, dividend: -1, bvalue: -1)
         }
         else {
-            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: "", pclose: 5480, ovalue: 5500, lcircuit: 5000, ucircuit: 6000, dividend: 700, bvalue: 915)
+            newStock = DetailedStockItem(name: stock!.name, current: stock!.current, difference: stock!.difference, percentage: stock!.percentage, sector: stock!.sector, profile: "", pclose: -1, ovalue: -1, lcircuit: -1, ucircuit: -1, dividend: -1, bvalue: -1)
         }
         return newStock
     }
