@@ -32,12 +32,29 @@ class FullStockViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        name.text = stock!.name
+        current.text = ""
+        difference.text = ""
+        percentage.text = ""
+        sector.text = "\(stock!.sector)"
+        
+        profile.text = ""
+        pclose.text = ""
+        ovalue.text = ""
+        lcircuit.text = ""
+        ucircuit.text = ""
+        dividend.text = ""
+        bvalue.text = ""
+    }
+    
+    func fetchAndSetup() {
+        
         // serialise the json response into StockItem array
         let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://infisesapitest-swghosh.rhcloud.com/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
         if apiCall.performApiCall() != nil {
             fullStock = apiCall.getFullStock()
-        
+            
             time.text = apiCall.time!
             
             var triangle = "▼"
@@ -65,13 +82,25 @@ class FullStockViewController: UIViewController {
             
             activity.stopAnimating()
         }
+        else {
+            return
+        }
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchAndSetup()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         // enables the navigation bar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // start animating the activity indicator
+        activity.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {

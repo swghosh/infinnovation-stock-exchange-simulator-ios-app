@@ -13,11 +13,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var detailsTableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    func fetchAndSetupTable() {
         // serialise the json response into StockItem array
         let apiCall: StocksProfileListAPICall = StocksProfileListAPICall(urlString: "https://infisesapitest-swghosh.rhcloud.com/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         if apiCall.performApiCall() != nil {
@@ -27,13 +25,30 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             activity.stopAnimating()
         }
+        else {
+            return
+        }
+        detailsTableView.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchAndSetupTable()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // disables the navigation bar
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        // start animating the activity
+        activity.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {

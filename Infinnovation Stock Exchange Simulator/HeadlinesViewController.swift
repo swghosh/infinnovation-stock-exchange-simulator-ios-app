@@ -12,14 +12,11 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    @IBOutlet weak var headlinesTableView: UITableView!
     
     var news: [NewsItem] = [NewsItem]()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+    func fetchAndSetup() {
         // serialise the json response into StockItem array
         let apiCall: HeadlinesListAPICall = HeadlinesListAPICall(urlString: "https://infisesapitest-swghosh.rhcloud.com/api/headlineslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         if apiCall.performApiCall() != nil {
@@ -29,6 +26,24 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
             
             activity.stopAnimating()
         }
+        headlinesTableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        fetchAndSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // start animating the activity
+        activity.startAnimating()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
     }
 
