@@ -11,6 +11,7 @@ import Foundation
 class StocksListAPICall {
     
     var url: URL?
+    var jsonData: Data?
     
     init(urlString:String, apiKey: String) {
         self.url = URL(string: "\(urlString)?key=\(apiKey)")
@@ -19,10 +20,33 @@ class StocksListAPICall {
     var stocks: [StockItem]?
     var time: String?
     
-    func getStocksList(jsonData: Data) -> [StockItem] {
+    func performApiCall() -> Data? {
+        
+        let request = URLRequest(url: url!)
+        let sharedSession = URLSession.shared
+        
+        var finished = false
+        
+        let task = sharedSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
+            self.jsonData = data
+            
+            finished = true
+            
+        })
+        task.resume()
+        
+        while(!finished) {
+            // blocks the code till async task completion handler finishes
+        }
+        
+        return jsonData
+    }
+    
+    func getStocksList() -> [StockItem] {
         stocks = [StockItem]()
         do {
-            let json = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions()) as? [String: Any]
+            let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as? [String: Any]
             let list = json!["result"] as! [[String: Any]]
             time = json!["time"] as? String
             

@@ -10,19 +10,45 @@ import Foundation
 
 class FullStockAPICall {
     var url: URL?
+    var jsonData: Data?
     var stock: StockItem
     
     init(urlString:String, apiKey: String, stock: StockItem) {
-        self.url = URL(string: "\(urlString)?key=\(apiKey)&name=\(stock.name)")
+        let name = stock.name.replacingOccurrences(of: " ", with: "%20")
+        
+        self.url = URL(string: "\(urlString)?key=\(apiKey)&name=\(name)")
         self.stock = stock
     }
     
     var fullStock: FullStockItem?
     var time: String?
     
-    func getFullStock(jsonData: Data) -> FullStockItem {
+    func performApiCall() -> Data? {
+        
+        let request = URLRequest(url: url!)
+        let sharedSession = URLSession.shared
+        
+        var finished = false
+        
+        let task = sharedSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
+            self.jsonData = data
+            
+            finished = true
+            
+        })
+        task.resume()
+        
+        while(!finished) {
+            // blocks the code till async task completion handler finishes
+        }
+        
+        return jsonData
+    }
+    
+    func getFullStock() -> FullStockItem {
         do {
-            let json = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions()) as? [String: Any]
+            let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as? [String: Any]
             let result = json!["result"] as! [String: Any]
             time = json!["time"] as? String
             
