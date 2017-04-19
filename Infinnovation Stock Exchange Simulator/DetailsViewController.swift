@@ -23,7 +23,6 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             time.text = apiCall.time!
             
-            activity.stopAnimating()
         }
         else {
             return
@@ -41,6 +40,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidAppear(animated)
         
         fetchAndSetupTable()
+        activity.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {

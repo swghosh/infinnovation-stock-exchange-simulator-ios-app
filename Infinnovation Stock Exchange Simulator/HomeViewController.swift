@@ -25,7 +25,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             time.text = apiCall.time!
             
-            activity.stopAnimating()
         }
         else {
             // in case of JSON fetch error
@@ -60,6 +59,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
         
         fetchAndSetupTable()
+        activity.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {

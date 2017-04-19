@@ -24,7 +24,6 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
             
             time.text = apiCall.time!
             
-            activity.stopAnimating()
         }
         headlinesTableView.reloadData()
     }
@@ -33,6 +32,7 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidAppear(animated)
         
         fetchAndSetup()
+        activity.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {

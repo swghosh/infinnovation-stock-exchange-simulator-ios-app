@@ -80,7 +80,6 @@ class FullStockViewController: UIViewController {
             dividend.text = "₹\(fullStock!.dividend)"
             bvalue.text = "₹\(fullStock!.bvalue)"
             
-            activity.stopAnimating()
         }
         else {
             return
@@ -92,6 +91,7 @@ class FullStockViewController: UIViewController {
         super.viewDidAppear(animated)
         
         fetchAndSetup()
+        activity.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
