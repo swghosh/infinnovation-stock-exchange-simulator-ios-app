@@ -7,9 +7,12 @@
 //
 
 class NewsItem {
+    // defines a data model for a news item
+    
     var time: String
     var content: String
     
+    // initializer
     init(time: String, content: String) {
         self.time = time
         self.content = content

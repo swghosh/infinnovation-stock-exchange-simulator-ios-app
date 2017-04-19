@@ -9,7 +9,10 @@
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
-
+    
+    // subclass of UITableViewCell
+    // used in storyboard inside HeadlinesViewController's TableView for custom-style prototype cells
+    
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var news: UILabel!
     

@@ -9,7 +9,10 @@
 import UIKit
 
 class StockTableViewCell: UITableViewCell {
-
+    
+    // subclass of UITableViewCell
+    // used in storyboard inside HomeViewController's TableView for custom-style prototype cells
+    
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var difference: UILabel!
     @IBOutlet weak var current: UILabel!

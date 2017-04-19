@@ -440,7 +440,7 @@
                                                 <string key="content">Bajaj Auto Limited is an Indian two-wheeler and three-wheeler manufacturing company. Bajaj Auto manufactures and sells motorcycles, scooters and auto rickshaws. Bajaj Auto is a part of the Bajaj Group.</string>
                                                 <attributes>
                                                     <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>

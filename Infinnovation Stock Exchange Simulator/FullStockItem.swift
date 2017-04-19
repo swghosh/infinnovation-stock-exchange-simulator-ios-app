@@ -8,6 +8,9 @@
 
 class FullStockItem: StockItem {
     
+    // defines a data model for a stock item holds the full details of the stock
+    // inherits capabailities of StockItem
+    
     var pclose: Int
     var ovalue: Int
     var lcircuit: Int
@@ -15,6 +18,7 @@ class FullStockItem: StockItem {
     var dividend: Int
     var bvalue: Int
     
+    // initializer
     init(name: String, current: Int, difference: Int, percentage: Double, sector: String, profile: String, pclose: Int, ovalue: Int, lcircuit: Int, ucircuit: Int, dividend: Int, bvalue: Int) {
         self.pclose = pclose
         self.ovalue = ovalue

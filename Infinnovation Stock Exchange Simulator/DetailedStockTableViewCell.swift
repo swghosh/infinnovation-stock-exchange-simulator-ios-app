@@ -9,7 +9,10 @@
 import UIKit
 
 class DetailedStockTableViewCell: UITableViewCell {
-
+    
+    // subclass of UITableViewCell
+    // used in storyboard inside DetailsViewController's TableView for custom-style prototype cells
+    
     @IBOutlet weak var sector: UILabel!
     @IBOutlet weak var profile: UILabel!
     @IBOutlet weak var percentage: UILabel!
