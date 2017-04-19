@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Infinnovation Stock Exchange Simulator
 //
 //  Created by SwG Ghosh on 29/03/17.
@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         else {
             // in case of JSON fetch error
+            displayNoInternet()
             return
         }
         _ = sortStocksBySector()
@@ -48,6 +49,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             stocksSortBySector[i].append(stock)
         }
         return stocksSortBySector
+    }
+    
+    func displayNoInternet() {
+        let alertController = UIAlertController(title: "Network Issue", message: "No internet connection is currently available. Please make sure that you have a working internet connection in order to use this application.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
