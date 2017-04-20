@@ -90,7 +90,9 @@ class FullStockViewController: UIViewController {
     
     func displayNoInternet() {
         let alertController = UIAlertController(title: "Network Issue", message: "No internet connection is currently available. Please make sure that you have a working internet connection in order to use this application.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Okay!", style: .default, handler: { (action: UIAlertAction) in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
         self.present(alertController, animated: true, completion: nil)
     }
     

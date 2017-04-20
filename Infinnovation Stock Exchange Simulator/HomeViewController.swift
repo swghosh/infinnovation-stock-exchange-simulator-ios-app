@@ -53,7 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func displayNoInternet() {
         let alertController = UIAlertController(title: "Network Issue", message: "No internet connection is currently available. Please make sure that you have a working internet connection in order to use this application.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     
