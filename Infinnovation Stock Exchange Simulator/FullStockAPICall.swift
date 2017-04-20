@@ -10,24 +10,33 @@ import Foundation
 
 class FullStockAPICall: APICall {
     
+    // the StockItem whose corresponding FullStockItem is to be fetched
     var stock: StockItem
     
+    // initializer
     init(urlString:String, apiKey: String, stock: StockItem) {
         self.stock = stock
         super.init(urlString: urlString, apiKey: apiKey)
         
+        // url escaping for white spaces
         let name = stock.name.replacingOccurrences(of: " ", with: "%20")
         self.url = URL(string: "\(urlString)?key=\(apiKey)&name=\(name)")
     }
     
+    // a FullStockItem that will be JSON serialized/ casted from the JSON
     var fullStock: FullStockItem?
     
     func getFullStock() -> FullStockItem {
         do {
+            // JSON Serialization is attempted on the received data
             let json = try JSONSerialization.jsonObject(with: jsonData!, options: JSONSerialization.ReadingOptions()) as? [String: Any]
+            // type casting
             let result = json!["result"] as! [String: Any]
+            
+            // the date, time when the data was fetched from the API is also stored as a String
             time = json!["time"] as? String
             
+            // casting all data to be finally produce a FullStockItem
             let name = result["name"] as! String
             let current = result["current"] as! Int
             let difference = result["difference"] as! Int
@@ -48,6 +57,7 @@ class FullStockAPICall: APICall {
         catch {
             print(error)
         }
+        // the FullStockItem is returned
         return fullStock!
     }
 }
