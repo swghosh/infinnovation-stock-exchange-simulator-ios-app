@@ -94,6 +94,7 @@ class FullStockViewController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         }))
         self.present(alertController, animated: true, completion: nil)
+        time.text = "No Internet Connectivity"
     }
     
     override func viewDidAppear(_ animated: Bool) {

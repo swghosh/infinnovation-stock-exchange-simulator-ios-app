@@ -6,6 +6,7 @@
 //  Copyright © 2017 infinnovation. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -15,6 +16,15 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var detailsTableView: UITableView!
     
+    var timer: Timer?
+    var internetConnPresent: Bool = true
+    
+    func setupTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer: Timer) in
+            self.fetchAndSetupTable()
+        })
+    }
+    
     func fetchAndSetupTable() {
         // serialise the json response into StockItem array
         let apiCall: StocksProfileListAPICall = StocksProfileListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
@@ -23,9 +33,15 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             time.text = apiCall.time!
             
+            internetConnPresent = true
+            
         }
         else {
-            displayNoInternet()
+            // in case of JSON fetch error
+            if internetConnPresent {
+                displayNoInternet()
+            }
+            internetConnPresent = false
             return
         }
         detailsTableView.reloadData()
@@ -35,6 +51,13 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alertController = UIAlertController(title: "Network Issue", message: "No internet connection is currently available. Please make sure that you have a working internet connection in order to use this application.", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
+        time.text = "No Internet Connectivity"
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        timer?.invalidate()
     }
     
     override func viewDidLoad() {
@@ -46,8 +69,12 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        internetConnPresent = true
+        
         fetchAndSetupTable()
         activity.stopAnimating()
+        
+        setupTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {

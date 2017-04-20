@@ -6,6 +6,7 @@
 //  Copyright © 2017 infinnovation. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -16,7 +17,16 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var news: [NewsItem] = [NewsItem]()
     
-    func fetchAndSetup() {
+    var timer: Timer?
+    var internetConnPresent: Bool = true
+    
+    func setupTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: { (timer: Timer) in
+            self.fetchAndSetupTable()
+        })
+    }
+    
+    func fetchAndSetupTable() {
         // serialise the json response into StockItem array
         let apiCall: HeadlinesListAPICall = HeadlinesListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/headlineslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         if apiCall.performApiCall() != nil {
@@ -24,9 +34,15 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
             
             time.text = apiCall.time!
             
+            internetConnPresent = true
+            
         }
         else {
-            displayNoInternet()
+            // in case of JSON fetch error
+            if internetConnPresent {
+                displayNoInternet()
+            }
+            internetConnPresent = false
             return
         }
         headlinesTableView.reloadData()
@@ -36,13 +52,18 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         let alertController = UIAlertController(title: "Network Issue", message: "No internet connection is currently available. Please make sure that you have a working internet connection in order to use this application.", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Okay!", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
+        time.text = "No Internet Connectivity"
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        fetchAndSetup()
+        internetConnPresent = true
+        
+        fetchAndSetupTable()
         activity.stopAnimating()
+        
+        setupTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +77,13 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        timer?.invalidate()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
