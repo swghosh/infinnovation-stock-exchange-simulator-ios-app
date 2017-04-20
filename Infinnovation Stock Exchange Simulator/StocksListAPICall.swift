@@ -8,41 +8,14 @@
 
 import Foundation
 
-class StocksListAPICall {
+class StocksListAPICall: APICall {
     
-    var url: URL?
-    var jsonData: Data?
-    
-    init(urlString:String, apiKey: String) {
-        self.url = URL(string: "\(urlString)?key=\(apiKey)")
+    override init(urlString: String, apiKey: String) {
+        super.init(urlString: urlString, apiKey: apiKey)
     }
     
     var stocks: [StockItem]?
-    var time: String?
-    
-    func performApiCall() -> Data? {
-        
-        let request = URLRequest(url: url!)
-        let sharedSession = URLSession.shared
-        
-        var finished = false
-        
-        let task = sharedSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            
-            self.jsonData = data
-            
-            finished = true
-            
-        })
-        task.resume()
-        
-        while(!finished) {
-            // blocks the code till async task completion handler finishes
-        }
-        
-        return jsonData
-    }
-    
+
     func getStocksList() -> [StockItem] {
         stocks = [StockItem]()
         do {
@@ -66,6 +39,4 @@ class StocksListAPICall {
         }
         return stocks!
     }
-    
-    
 }

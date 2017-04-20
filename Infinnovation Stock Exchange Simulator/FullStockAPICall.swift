@@ -8,43 +8,19 @@
 
 import Foundation
 
-class FullStockAPICall {
-    var url: URL?
-    var jsonData: Data?
+class FullStockAPICall: APICall {
+    
     var stock: StockItem
     
     init(urlString:String, apiKey: String, stock: StockItem) {
-        let name = stock.name.replacingOccurrences(of: " ", with: "%20")
-        
-        self.url = URL(string: "\(urlString)?key=\(apiKey)&name=\(name)")
         self.stock = stock
+        super.init(urlString: urlString, apiKey: apiKey)
+        
+        let name = stock.name.replacingOccurrences(of: " ", with: "%20")
+        self.url = URL(string: "\(urlString)?key=\(apiKey)&name=\(name)")
     }
     
     var fullStock: FullStockItem?
-    var time: String?
-    
-    func performApiCall() -> Data? {
-        
-        let request = URLRequest(url: url!)
-        let sharedSession = URLSession.shared
-        
-        var finished = false
-        
-        let task = sharedSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
-            
-            self.jsonData = data
-            
-            finished = true
-            
-        })
-        task.resume()
-        
-        while(!finished) {
-            // blocks the code till async task completion handler finishes
-        }
-        
-        return jsonData
-    }
     
     func getFullStock() -> FullStockItem {
         do {
