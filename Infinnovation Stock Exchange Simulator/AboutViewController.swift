@@ -16,7 +16,7 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // disables the navigation bar
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     override func viewDidLoad() {
