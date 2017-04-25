@@ -706,23 +706,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGV-EY-SW1">
-                                <rect key="frame" x="179.5" y="10" width="147" height="14.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph updated " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyI-I6-1bl">
-                                        <rect key="frame" x="0.0" y="0.0" width="82" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-6x-vh2">
-                                        <rect key="frame" x="82" y="0.0" width="65" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1iO-Om-6bj">
                                 <rect key="frame" x="0.0" y="32.5" width="343" height="267.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -750,15 +733,32 @@
                                     <outlet property="delegate" destination="rPF-3e-QCG" id="Dzs-Yg-0QC"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGV-EY-SW1">
+                                <rect key="frame" x="16" y="10" width="147" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph updated " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyI-I6-1bl">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05/10/2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-6x-vh2">
+                                        <rect key="frame" x="82" y="0.0" width="65" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1iO-Om-6bj" firstAttribute="leading" secondItem="H11-HS-JWM" secondAttribute="leading" id="UaV-RP-tEe"/>
                             <constraint firstItem="1iO-Om-6bj" firstAttribute="top" secondItem="qGV-EY-SW1" secondAttribute="bottom" constant="8" id="Uti-Ef-6Ny"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qGV-EY-SW1" secondAttribute="trailing" constant="0.5" id="c8H-vV-h07"/>
                             <constraint firstItem="bXf-HX-FVR" firstAttribute="top" secondItem="1iO-Om-6bj" secondAttribute="bottom" id="qOE-jF-Jh8"/>
                             <constraint firstItem="qGV-EY-SW1" firstAttribute="top" secondItem="JUn-zN-mCw" secondAttribute="bottom" constant="10" id="sLM-c1-hiP"/>
                             <constraint firstAttribute="trailing" secondItem="1iO-Om-6bj" secondAttribute="trailing" id="sPd-uK-DvK"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qGV-EY-SW1" secondAttribute="leading" id="thl-aA-K7T"/>
                         </constraints>
                     </view>
                     <connections>

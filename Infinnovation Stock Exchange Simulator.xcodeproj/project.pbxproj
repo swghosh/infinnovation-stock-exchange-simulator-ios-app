@@ -21,10 +21,10 @@
 		C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C839523F1E95387000EBD934 /* FullStockViewController.swift */; };
 		C846EDA41EAE59FA00A1E70D /* UpdateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C846EDA31EAE59FA00A1E70D /* UpdateItem.swift */; };
 		C846EDA61EAE5AF400A1E70D /* UpdatesListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C846EDA51EAE5AF400A1E70D /* UpdatesListAPICall.swift */; };
-		C846EDAA1EAE664100A1E70D /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C846EDA91EAE664100A1E70D /* GraphViewController.swift */; };
 		C852FE1E1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */; };
 		C852FE201EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */; };
 		C89BB2311EA8CB820040D8EF /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BB2301EA8CB820040D8EF /* APICall.swift */; };
+		C89BD9871EAFB39A0043BE4D /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD9861EAFB39A0043BE4D /* GraphViewController.swift */; };
 		C8ADBF651EA3FC5E000EC00A /* FullStockAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ADBF641EA3FC5E000EC00A /* FullStockAPICall.swift */; };
 		C8B19B051EA2A77300326533 /* StocksListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B19B041EA2A77300326533 /* StocksListAPICall.swift */; };
 		C8C7C5B51E9F912C00598879 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C7C5B41E9F912C00598879 /* InformationViewController.swift */; };
@@ -50,10 +50,10 @@
 		C839523F1E95387000EBD934 /* FullStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStockViewController.swift; sourceTree = "<group>"; };
 		C846EDA31EAE59FA00A1E70D /* UpdateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateItem.swift; sourceTree = "<group>"; };
 		C846EDA51EAE5AF400A1E70D /* UpdatesListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesListAPICall.swift; sourceTree = "<group>"; };
-		C846EDA91EAE664100A1E70D /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = ../GraphViewController.swift; sourceTree = "<group>"; };
 		C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksProfileListAPICall.swift; sourceTree = "<group>"; };
 		C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesListAPICall.swift; sourceTree = "<group>"; };
 		C89BB2301EA8CB820040D8EF /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		C89BD9861EAFB39A0043BE4D /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		C8ADBF641EA3FC5E000EC00A /* FullStockAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullStockAPICall.swift; sourceTree = "<group>"; };
 		C8B19B041EA2A77300326533 /* StocksListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksListAPICall.swift; sourceTree = "<group>"; };
 		C8C7C5B41E9F912C00598879 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				C81C695C1E902CBF00F2B4C4 /* HomeViewController.swift */,
 				C800589C1E92898C0017FEB0 /* DetailsViewController.swift */,
 				C839523F1E95387000EBD934 /* FullStockViewController.swift */,
-				C846EDA91EAE664100A1E70D /* GraphViewController.swift */,
+				C89BD9861EAFB39A0043BE4D /* GraphViewController.swift */,
 				C8D5DB851E915B5F005A4F41 /* HeadlinesViewController.swift */,
 				C8D5DB891E9185EF005A4F41 /* AboutViewController.swift */,
 				C8C7C5B41E9F912C00598879 /* InformationViewController.swift */,
@@ -203,7 +203,7 @@
 				C83952401E95387000EBD934 /* FullStockViewController.swift in Sources */,
 				C846EDA61EAE5AF400A1E70D /* UpdatesListAPICall.swift in Sources */,
 				C80058A31E929C6D0017FEB0 /* DetailedStockTableViewCell.swift in Sources */,
-				C846EDAA1EAE664100A1E70D /* GraphViewController.swift in Sources */,
+				C89BD9871EAFB39A0043BE4D /* GraphViewController.swift in Sources */,
 				C89BB2311EA8CB820040D8EF /* APICall.swift in Sources */,
 				C812034A1D8DCC4E00A89DE0 /* AppDelegate.swift in Sources */,
 				C80058A11E9296210017FEB0 /* FullStockItem.swift in Sources */,
