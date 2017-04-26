@@ -8,12 +8,11 @@
 
 import UIKit
 
-class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GraphViewController: UIViewController {
     
     var stock: StockItem?
     var updates: [UpdateItem] = [UpdateItem]()
     
-    @IBOutlet weak var updatesTableView: UITableView!
     @IBOutlet weak var time: UILabel!
     
     func fetchAndSetup() {
@@ -42,25 +41,12 @@ class GraphViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidAppear(animated)
         
         fetchAndSetup()
-        updatesTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "Update"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        cell!.textLabel!.text = "\(updates[indexPath.row].time): ₹\(updates[indexPath.row].current)"
-        return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return updates.count
-    }
-    
 
     /*
     // MARK: - Navigation
