@@ -16,9 +16,9 @@ class GraphView: UIView {
     @IBInspectable var graphPointColor: UIColor = .blue
     @IBInspectable var graphLineColor: UIColor = .blue
     
-    var currents: [Int] = [150, 153, 156, 160, 156, 140, 100, 130, 131, 128, 149, 154]
-    var lvalue: Int = 100
-    var hvalue: Int = 160
+    var currents: [Int] = [0, 4, 6, 7, 8, 9, 10, 11, 11, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 20, 21, 21, 22]
+    var lvalue: Int = 0
+    var hvalue: Int = 22
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -27,13 +27,13 @@ class GraphView: UIView {
         
         // draw the axis for the graph
         let xAxisLine = UIBezierPath()
-        xAxisLine.move(to: CGPoint(x: 20.0, y: rect.height - 20.0))
-        xAxisLine.addLine(to: CGPoint(x: rect.width, y: rect.height - 20.0))
+        xAxisLine.move(to: CGPoint(x: 5.0, y: rect.height - 5.0))
+        xAxisLine.addLine(to: CGPoint(x: rect.width, y: rect.height - 5.0))
         xAxisLine.close()
         
         let yAxisLine = UIBezierPath()
-        yAxisLine.move(to: CGPoint(x: 20.0, y: 0.0))
-        yAxisLine.addLine(to: CGPoint(x: 20.0, y: rect.height - 20.0))
+        yAxisLine.move(to: CGPoint(x: 5.0, y: 0.0))
+        yAxisLine.addLine(to: CGPoint(x: 5.0, y: rect.height - 5.0))
         yAxisLine.close()
         
         graphAxisColor.setStroke()
@@ -55,20 +55,16 @@ class GraphView: UIView {
         graphPointColor.setFill()
         graphLineColor.setStroke()
         
-//        let originPoint = CGRect(x: 20.0 - originOffset, y: rect.height - 20.0 - originOffset, width: 5.0, height: 5.0)
-//        let originPath = UIBezierPath(ovalIn: originPoint)
-//        originPath.fill()
+        let xI: CGFloat = 5.0
+        let yI: CGFloat = rect.height - 5.0
         
-        let xI: CGFloat = 20.0
-        let yI: CGFloat = rect.height - 20.0 - 20.0
-        
-        let xDiff: CGFloat = (rect.width - 20.0 - 10.0)
-        let yDiff: CGFloat = (rect.height - 20.0 - 20.0 - 10.0)
+        let xDiff: CGFloat = (rect.width - xI - 5.0)
+        let yDiff: CGFloat = (yI - 0.0 - 5.0)
         
         let currDiff = CGFloat(hvalue - lvalue)
         let diffScale = currDiff / yDiff
         
-        let xDiffScale = (xDiff / CGFloat(currents.count))
+        let xDiffScale = (xDiff / CGFloat(currents.count - 1))
         
         var i = 0
         while(i < currents.count) {

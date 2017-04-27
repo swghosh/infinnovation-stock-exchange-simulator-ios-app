@@ -13,22 +13,33 @@ class GraphViewController: UIViewController {
     var stock: StockItem?
     var updates: [UpdateItem] = [UpdateItem]()
     
-    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var graphView: GraphView!
     
     func fetchAndSetup() {
+        let parentVC = self.parent as? FullStockViewController
         // serialise the json response into StockItem array
         let apiCall: UpdatesListAPICall = UpdatesListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/updateslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
         if apiCall.performApiCall() != nil {
             updates = apiCall.getUpdatesList()
-            
-            time.text = apiCall.time!
-            
+            parentVC?.time.text = apiCall.time!
         }
         else {
-            let parentVC = self.parent as? FullStockViewController
             parentVC?.displayNoInternet()
             return
         }
+        
+        var currents = [Int]()
+        for item in updates {
+            currents.append(item.current)
+        }
+        let lvalue = currents.min()!
+        let hvalue = currents.max()!
+        
+        graphView.currents = currents
+        graphView.lvalue = lvalue
+        graphView.hvalue = hvalue
+        
+        graphView.setNeedsDisplay()
     }
 
     override func viewDidLoad() {
