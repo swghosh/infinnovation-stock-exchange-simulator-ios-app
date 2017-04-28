@@ -16,12 +16,13 @@ class GraphView: UIView {
     @IBInspectable var graphAxisColor: UIColor = .black
     @IBInspectable var graphPointColor: UIColor = .blue
     @IBInspectable var graphLineColor: UIColor = .blue
+    @IBInspectable var graphLegendPointColor: UIColor = .gray
     
     // sample values whose graph is to be plotted
     var currents: [Int] = [49, 57, 71, 18, 92, 81, 72, 54, 8, 2, 78, 93, 47, 56, 41, 10, 29, 72, 78, 51, 47, 21, 33, 81, 28, 8, 1, 58, 19, 53, 0]
     // lowest and highest values in the actual graph used for calibrating the scale in the graph
     var lvalue: Int = 0
-    var hvalue: Int = 95
+    var hvalue: Int = 100
     
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -32,12 +33,19 @@ class GraphView: UIView {
         let axisOffset: CGFloat = 20.0
         // defines the point of origin of graph in terms of rect position
         let origin: CGPoint = CGPoint(x: axisOffset, y: rect.height - axisOffset)
+        // defines an offset for allowing a small border and to ensure plotted points do not get out of screen
+        let borderOffset: CGFloat = 10.0
+        // defines the radius of each point that is to be drawn
+        let pointRadius: CGFloat = 5.0
         
         // draws the x and y axis of the graph with the specified offset
         drawAxes(axisOffset: axisOffset)
         
+        // draws the scale for the graph to facilitate ease of understanding values
+        drawScale(originPoint: origin, borderOffset: borderOffset, pointRadius: pointRadius, yLowest: lvalue, yHighest: hvalue, numberOfValues: currents.count - 1)
+        
         // plots a graph based on the integral values provide and highest and lowest values
-        plotGraph(originPoint: origin, borderOffset: 10.0, pointRadius: 5.0, yValues: currents, yLowest: lvalue, yHighest: hvalue)
+        plotGraph(originPoint: origin, borderOffset: borderOffset, pointRadius: pointRadius, yValues: currents, yLowest: lvalue, yHighest: hvalue)
     }
     
     func drawAxes(axisOffset: CGFloat) {
@@ -63,6 +71,65 @@ class GraphView: UIView {
 
         xAxisLine.stroke()
         yAxisLine.stroke()
+    }
+    
+    func drawScale(originPoint: CGPoint, borderOffset: CGFloat, pointRadius: CGFloat, yLowest lvalue: Int, yHighest hvalue: Int, numberOfValues: Int) {
+        // refers to the current rect
+        let rect = self.bounds
+        
+        // defines a constant float value to help in drawing points on screen with rects
+        let originOffsetForPoint: CGFloat = pointRadius / 2;
+        
+        // sets the colors for the line graph that is to be plotted based on colours specified in IB
+        graphLegendPointColor.setFill()
+        
+        // defines the x, y positions on rect of the origin of the graph
+        let xOrigin: CGFloat = originPoint.x
+        let yOrigin: CGFloat = originPoint.y
+        
+        // defines the difference in x, y from highest postion of graph to lowest position on graph along x, y respectively as per points on the rect
+        let xDiff: CGFloat = (rect.width - xOrigin - borderOffset)
+        let yDiff: CGFloat = (yOrigin - 0.0 - borderOffset)
+        
+        // defines the difference in highest and lowest of the actual graph values
+        let valDiff = CGFloat(hvalue - lvalue)
+        // defines a scaling calibration value useful for plotting of y points on graph, differenceInActualValuesOfGraph/differenceInYLimitOfRect
+        let yDiffScale = valDiff / yDiff
+        
+        // defines a scaling calibration value useful for plotting of x points on graph, provided that x incremennts by one for each consecutive value of y
+        let xDiffScale = (xDiff / CGFloat(numberOfValues))
+        
+        // loop to draw the legend points along y axis
+        var i = 0
+        while(i <= 10) {
+            // actual rect point for the legend graph point that is to be plotted on the graph
+            let point = CGPoint(x: xOrigin, y: yOrigin - (CGFloat(hvalue - lvalue) * CGFloat(i) / 10.0) / yDiffScale)
+            // defining a rect with an origin offset at that point
+            let pointRect = CGRect(x: point.x - originOffsetForPoint, y: point.y - originOffsetForPoint, width: pointRadius, height: pointRadius)
+            // drawing a oval/circle in that rect to represent a point on the actual graph
+            let pointPath = UIBezierPath(ovalIn: pointRect)
+            // fill the oval with color
+            pointPath.fill()
+            
+            // increment loop counter
+            i = i + 1
+        }
+        
+        // loop to draw the legend point along x axis
+        i = 0
+        while(i <= numberOfValues) {
+            // actual rect point for the legend graph point that is to be plotted on the graph
+            let point = CGPoint(x: xOrigin + (CGFloat(i) * xDiffScale), y: yOrigin)
+            // defining a rect with an origin offset at that point
+            let pointRect = CGRect(x: point.x - originOffsetForPoint, y: point.y - originOffsetForPoint, width: pointRadius, height: pointRadius)
+            // drawing a oval/circle in that rect to represent a point on the actual graph
+            let pointPath = UIBezierPath(ovalIn: pointRect)
+            // fill the oval with color
+            pointPath.fill()
+            
+            // increment loop counter
+            i = i + 1
+        }
     }
     
     func plotGraph(originPoint: CGPoint, borderOffset: CGFloat, pointRadius: CGFloat, yValues values: [Int], yLowest lvalue: Int, yHighest hvalue: Int) {
