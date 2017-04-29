@@ -39,6 +39,10 @@ class GraphViewController: UIViewController {
         graphView.lvalue = lvalue
         graphView.hvalue = hvalue
         
+        for view in graphView.subviews {
+            view.removeFromSuperview()
+        }
+        
         graphView.setNeedsDisplay()
     }
 
