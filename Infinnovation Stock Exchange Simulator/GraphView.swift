@@ -20,7 +20,7 @@ class GraphView: UIView {
     @IBInspectable var graphLegendLabelColor: UIColor = .gray
     
     // sample values whose graph is to be plotted
-    var currents: [Int] = [49, 57, 71, 18, 92, 81, 72, 54, 8, 2, 78, 93, 47, 56, 41, 10, 29, 72, 78, 51, 47, 21, 33, 81, 28, 8, 1, 58, 19, 53, 0]
+    var currents: [Int] = [49, 57, 71, 18, 92, 81, 72, 54, 8, 2, 78, 93, 47, 56, 41, 10, 29, 72, 78, 51, 47, 21, 33, 81, 28, 0]
     // lowest and highest values in the actual graph used for calibrating the scale in the graph
     var lvalue: Int = 0
     var hvalue: Int = 100
@@ -100,7 +100,7 @@ class GraphView: UIView {
         // defines a scaling calibration value useful for plotting of x points on graph, provided that x incremennts by one for each consecutive value of y
         let xDiffScale = (xDiff / CGFloat(numberOfValues))
         
-        // loop to draw the legend points along y axis
+        // loop to draw the legend points and legend text labels along y axis
         var i = 0
         while(i <= 10) {
             // actual rect point for the legend graph point that is to be plotted on the graph
@@ -114,19 +114,23 @@ class GraphView: UIView {
             
             // draw labels for legend texts
             let label = UILabel(frame: CGRect(x: xOrigin - xOrigin, y: point.y - (yDiff / 11.0) + (yDiff / 11.0 / 4.0) , width: originPoint.x - 2.0, height: yDiff / 11.0))
+            // make font in label to adjust to fit width
             label.adjustsFontSizeToFitWidth = true
+            // set legend text color as specified in IB
             label.textColor = graphLegendLabelColor
             label.backgroundColor = .clear
-            label.textAlignment = .justified
+            label.textAlignment = .center
+            // assign appropriate valua as text to the legend label
             label.text = "\(((hvalue - lvalue) * i / 10) + lvalue)"
             
+            // add the label to the current view
             self.addSubview(label)
             
             // increment loop counter
             i = i + 1
         }
         
-        // loop to draw the legend point along x axis
+        // loop to draw the legend points and legend text labels along x axis
         i = 0
         while(i <= numberOfValues) {
             // actual rect point for the legend graph point that is to be plotted on the graph
@@ -137,6 +141,20 @@ class GraphView: UIView {
             let pointPath = UIBezierPath(ovalIn: pointRect)
             // fill the oval with color
             pointPath.fill()
+            
+            // draw labels for legend texts
+            let label = UILabel(frame: CGRect(x: point.x - (xDiffScale / 2.0), y: originPoint.y , width: xDiffScale, height: rect.height - originPoint.y))
+            // set font in label
+            label.font = .systemFont(ofSize: 8.0)
+            // set legend text color as specified in IB
+            label.textColor = graphLegendLabelColor
+            label.backgroundColor = .clear
+            label.textAlignment = .center
+            // assign appropriate valua as text to the legend label
+            label.text = "\(i)"
+            
+            // add the label to the current view
+            self.addSubview(label)
             
             // increment loop counter
             i = i + 1
