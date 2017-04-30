@@ -18,6 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var stocks: [StockItem] = [StockItem]()
     var stocksSortBySector: [[StockItem]] = [[StockItem]]()
     
+    var prevStocksSortBySector: [[StockItem]] = [[StockItem]]()
+    
     var timer: Timer?
     var internetConnPresent: Bool = true
     
@@ -50,6 +52,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func sortStocksBySector() -> [[StockItem]] {
+        // keeps a backup copy of the previous array
+        prevStocksSortBySector = stocksSortBySector
         // sort the stocks sector wise
         stocksSortBySector = [[StockItem]]()
         var i = -1
@@ -126,6 +130,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.current.text = "₹\(stock.current)"
         cell.difference.text = "\(triangle) ₹\(stock.difference)"
         cell.percentage.text = "\(stock.percentage)%"
+        
+        // to highlight cell in yellow colour in case of price update
+        if prevStocksSortBySector.count == stocksSortBySector.count {
+            if prevStocksSortBySector[indexPath.section][indexPath.row].current != stock.current {
+                cell.layer.backgroundColor = UIColor.yellow.cgColor
+            }
+            else {
+                cell.layer.backgroundColor = UIColor.white.cgColor
+            }
+        }
         
         return cell
         
