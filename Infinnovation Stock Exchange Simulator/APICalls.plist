@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Stocks List API URL</key>
+	<string>https://infisesapi-vistas.rhcloud.com/api/stockslist</string>
+	<key>Stocks Profile List API URL</key>
+	<string>https://infisesapi-vistas.rhcloud.com/api/stockslist</string>
+	<key>Full Stock API URL</key>
+	<string>https://infisesapi-vistas.rhcloud.com/api/fullstock</string>
+	<key>Updates List API URL</key>
+	<string>https://infisesapi-vistas.rhcloud.com/api/updateslist</string>
+	<key>Headlines List API URL</key>
+	<string>https://infisesapi-vistas.rhcloud.com/api/headlineslist</string>
+	<key>API Key</key>
+	<string>Z9FpluAnvXADniEcz9Rcvg28U1CdNC</string>
+</dict>
+</plist>

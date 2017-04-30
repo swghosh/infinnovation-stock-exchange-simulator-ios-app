@@ -23,6 +23,8 @@
 		C846EDA61EAE5AF400A1E70D /* UpdatesListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C846EDA51EAE5AF400A1E70D /* UpdatesListAPICall.swift */; };
 		C852FE1E1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */; };
 		C852FE201EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */; };
+		C88C88311EB5C59400B28BDA /* About.plist in Resources */ = {isa = PBXBuildFile; fileRef = C88C882F1EB5C59400B28BDA /* About.plist */; };
+		C88C88321EB5C59400B28BDA /* APICalls.plist in Resources */ = {isa = PBXBuildFile; fileRef = C88C88301EB5C59400B28BDA /* APICalls.plist */; };
 		C89BB2311EA8CB820040D8EF /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BB2301EA8CB820040D8EF /* APICall.swift */; };
 		C89BD9871EAFB39A0043BE4D /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD9861EAFB39A0043BE4D /* GraphViewController.swift */; };
 		C89BD9891EAFB5900043BE4D /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BD9881EAFB5900043BE4D /* GraphView.swift */; };
@@ -53,6 +55,8 @@
 		C846EDA51EAE5AF400A1E70D /* UpdatesListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdatesListAPICall.swift; sourceTree = "<group>"; };
 		C852FE1D1EA3A31D00FAA5F0 /* StocksProfileListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StocksProfileListAPICall.swift; sourceTree = "<group>"; };
 		C852FE1F1EA3B5EA00FAA5F0 /* HeadlinesListAPICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlinesListAPICall.swift; sourceTree = "<group>"; };
+		C88C882F1EB5C59400B28BDA /* About.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = About.plist; sourceTree = "<group>"; };
+		C88C88301EB5C59400B28BDA /* APICalls.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APICalls.plist; sourceTree = "<group>"; };
 		C89BB2301EA8CB820040D8EF /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		C89BD9861EAFB39A0043BE4D /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		C89BD9881EAFB5900043BE4D /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				C81203491D8DCC4E00A89DE0 /* AppDelegate.swift */,
 				C81203521D8DCC4E00A89DE0 /* LaunchScreen.storyboard */,
 				C81203551D8DCC4E00A89DE0 /* Info.plist */,
+				C88C882F1EB5C59400B28BDA /* About.plist */,
+				C88C88301EB5C59400B28BDA /* APICalls.plist */,
 			);
 			path = "Infinnovation Stock Exchange Simulator";
 			sourceTree = "<group>";
@@ -184,8 +190,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C88C88311EB5C59400B28BDA /* About.plist in Resources */,
 				C81203541D8DCC4E00A89DE0 /* LaunchScreen.storyboard in Resources */,
 				C81203511D8DCC4E00A89DE0 /* Assets.xcassets in Resources */,
+				C88C88321EB5C59400B28BDA /* APICalls.plist in Resources */,
 				C812034F1D8DCC4E00A89DE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
