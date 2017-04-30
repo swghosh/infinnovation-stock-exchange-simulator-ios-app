@@ -40,9 +40,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         else {
             // in case of JSON fetch error
             if internetConnPresent {
+                internetConnPresent = false
                 displayNoInternet()
             }
-            internetConnPresent = false
             return
         }
         _ = sortStocksBySector()

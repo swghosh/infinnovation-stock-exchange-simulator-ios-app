@@ -39,9 +39,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         else {
             // in case of JSON fetch error
             if internetConnPresent {
+                internetConnPresent = false
                 displayNoInternet()
             }
-            internetConnPresent = false
             return
         }
         detailsTableView.reloadData()

@@ -40,9 +40,9 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
         else {
             // in case of JSON fetch error
             if internetConnPresent {
+                internetConnPresent = false
                 displayNoInternet()
             }
-            internetConnPresent = false
             return
         }
         headlinesTableView.reloadData()
