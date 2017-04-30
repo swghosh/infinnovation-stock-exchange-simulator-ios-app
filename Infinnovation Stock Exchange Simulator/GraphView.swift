@@ -18,6 +18,7 @@ class GraphView: UIView {
     @IBInspectable var graphLineColor: UIColor = .blue
     @IBInspectable var graphLegendPointColor: UIColor = .gray
     @IBInspectable var graphLegendLabelColor: UIColor = .gray
+    @IBInspectable var graphLegendLineColor: UIColor = .gray
     
     // sample values whose graph is to be plotted
     var currents: [Int] = [49, 57, 71, 18, 92, 81, 72, 54, 8, 2, 78, 93, 47, 56, 41, 10, 29, 72, 78, 51, 47, 21, 33, 81, 28, 0]
@@ -83,6 +84,8 @@ class GraphView: UIView {
         
         // sets the colors for the line graph that is to be plotted based on colours specified in IB
         graphLegendPointColor.setFill()
+        // sets the color for the legend line that is specified in IB
+        graphLegendLineColor.setStroke()
         
         // defines the x, y positions on rect of the origin of the graph
         let xOrigin: CGFloat = originPoint.x
@@ -126,6 +129,21 @@ class GraphView: UIView {
             // add the label to the current view
             self.addSubview(label)
             
+            if (i != 0) {
+                // draw a line for graph legend
+                let line = UIBezierPath()
+                // point upto which line is to be drawn
+                let toPoint = CGPoint(x: rect.width, y: point.y)
+                // line to start from current defined point
+                line.move(to: point)
+                // line to end at
+                line.addLine(to: toPoint)
+                line.close()
+                
+                // line is stroked with color set
+                line.stroke()
+            }
+            
             // increment loop counter
             i = i + 1
         }
@@ -155,6 +173,21 @@ class GraphView: UIView {
             
             // add the label to the current view
             self.addSubview(label)
+            
+            if(i != 0) {
+                // draw a line for graph legend
+                let line = UIBezierPath()
+                // point upto which line is to be drawn
+                let toPoint = CGPoint(x: point.x, y: 0.0)
+                // line to start from current defined point
+                line.move(to: point)
+                // line to end at
+                line.addLine(to: toPoint)
+                line.close()
+                
+                // line is stroked with color set
+                line.stroke()
+            }
             
             // increment loop counter
             i = i + 1
