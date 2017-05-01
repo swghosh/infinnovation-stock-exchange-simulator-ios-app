@@ -27,8 +27,13 @@ class FullStockViewController: UIViewController {
     @IBOutlet weak var dividend: UILabel!
     @IBOutlet weak var bvalue: UILabel!
     
+    @IBOutlet weak var hvalue: UILabel!
+    @IBOutlet weak var lvalue: UILabel!
+    
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var activity: UIActivityIndicatorView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +106,9 @@ class FullStockViewController: UIViewController {
         super.viewDidAppear(animated)
         
         fetchAndSetup()
+        // puts the scroll view back to normal and unhides it
+        scrollView.isUserInteractionEnabled = true
+        scrollView.alpha =  1.0
         activity.stopAnimating()
     }
     
@@ -109,6 +117,9 @@ class FullStockViewController: UIViewController {
         
         // enables the navigation bar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        // keeps the scroll view hidden
+        scrollView.isUserInteractionEnabled = false
+        scrollView.alpha =  0.0
         // start animating the activity indicator
         activity.startAnimating()
     }

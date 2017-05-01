@@ -35,6 +35,9 @@ class GraphViewController: UIViewController {
         let lvalue = currents.min()!
         let hvalue = currents.max()!
         
+        parentVC?.hvalue.text = "₹\(hvalue)"
+        parentVC?.lvalue.text = "₹\(lvalue)"
+        
         graphView.currents = currents
         graphView.lvalue = lvalue
         graphView.hvalue = hvalue

@@ -446,7 +446,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q9u-fR-GY8" userLabel="Properties">
-                                        <rect key="frame" x="132.5" y="121.5" width="111.5" height="96"/>
+                                        <rect key="frame" x="132.5" y="121.5" width="111.5" height="128"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="66t-I1-WW7">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="16"/>
@@ -550,10 +550,44 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="piL-TD-Fby">
+                                                <rect key="frame" x="3" y="96" width="105.5" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highest Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWu-Wf-V3c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" red="0.2525038819" green="0.25500392039999997" blue="0.25500392039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv2-fC-s3X" userLabel="Value">
+                                                        <rect key="frame" x="89" y="0.0" width="16.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XqD-pO-mMe">
+                                                <rect key="frame" x="5" y="112" width="101.5" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lowest Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eez-xy-3ec">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" red="0.2525038819" green="0.25500392039999997" blue="0.25500392039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-U8-BvA" userLabel="Value">
+                                                        <rect key="frame" x="85" y="0.0" width="16.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DO4-4S-fsX" userLabel="Graph View">
-                                        <rect key="frame" x="26" y="247.5" width="323" height="300"/>
+                                        <rect key="frame" x="26" y="279.5" width="323" height="300"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="gSw-V2-lFk"/>
                                         </constraints>
@@ -637,12 +671,15 @@
                         <outlet property="current" destination="M77-II-92a" id="xw5-xL-yLy"/>
                         <outlet property="difference" destination="Tr5-nq-SlB" id="r1d-sR-HAy"/>
                         <outlet property="dividend" destination="Ek8-xL-WEA" id="Hkk-1N-wtY"/>
+                        <outlet property="hvalue" destination="Uv2-fC-s3X" id="4PS-PP-7J3"/>
                         <outlet property="lcircuit" destination="FLD-Fc-Gwv" id="FiS-0L-MLe"/>
+                        <outlet property="lvalue" destination="E3s-U8-BvA" id="cnT-yN-yNO"/>
                         <outlet property="name" destination="sbi-AB-es6" id="CyQ-r7-1hW"/>
                         <outlet property="ovalue" destination="57g-rz-MaZ" id="chT-nr-NPg"/>
                         <outlet property="pclose" destination="djR-bg-BQ8" id="Q1z-o1-8D8"/>
                         <outlet property="percentage" destination="rIw-Lf-Wkn" id="DwQ-9a-XrN"/>
                         <outlet property="profile" destination="faI-vi-hs7" id="gy3-vl-nvZ"/>
+                        <outlet property="scrollView" destination="pjg-5k-A7W" id="7W4-p1-35G"/>
                         <outlet property="sector" destination="7BH-Ui-M8N" id="FEl-dy-8fW"/>
                         <outlet property="time" destination="AMg-kH-GoF" id="LGf-Oh-oMO"/>
                         <outlet property="ucircuit" destination="kOr-GM-F20" id="74w-DC-rM0"/>
