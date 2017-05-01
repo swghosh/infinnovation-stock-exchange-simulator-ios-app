@@ -35,6 +35,8 @@ class FullStockViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    var internetConnPresent: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,9 +87,15 @@ class FullStockViewController: UIViewController {
             dividend.text = "₹\(fullStock!.dividend)"
             bvalue.text = "₹\(fullStock!.bvalue)"
             
+            internetConnPresent = true
+            
         }
         else {
-            displayNoInternet()
+            // in case of JSON fetch error
+            if internetConnPresent {
+                internetConnPresent = false
+                displayNoInternet()
+            }
             return
         }
         
