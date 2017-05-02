@@ -146,6 +146,7 @@ class FullStockViewController: UIViewController {
         let alertController = UIAlertController(title: "\(stock!.name)", message: "At \(updates![selectedIndex].time), \(stock!.name) securities were priced at ₹\(updates![selectedIndex].current).", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Okay!", style: .default, handler: nil)
         alertController.addAction(action)
+        alertController.popoverPresentationController?.sourceView = self.infoControl
         
         self.present(alertController, animated: true, completion: { () -> Void in
             self.infoControl.selectedSegmentIndex = -1
