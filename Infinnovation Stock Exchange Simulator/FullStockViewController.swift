@@ -13,6 +13,8 @@ class FullStockViewController: UIViewController {
     var stock: StockItem?
     var fullStock: FullStockItem?
     
+    var updates: [UpdateItem]?
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var current: UILabel!
     @IBOutlet weak var difference: UILabel!
@@ -34,6 +36,8 @@ class FullStockViewController: UIViewController {
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var infoControl: UISegmentedControl!
     
     var internetConnPresent: Bool = true
     
@@ -137,7 +141,16 @@ class FullStockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func segmentedControlPress(_ sender: UISegmentedControl) {
+        let selectedIndex = sender.selectedSegmentIndex
+        let alertController = UIAlertController(title: "\(stock!.name)", message: "At \(updates![selectedIndex].time), \(stock!.name) securities were priced at ₹\(updates![selectedIndex].current).", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Okay!", style: .default, handler: nil)
+        alertController.addAction(action)
+        
+        self.present(alertController, animated: true, completion: { () -> Void in
+            self.infoControl.selectedSegmentIndex = -1
+        })
+    }
     
     // MARK: - Navigation
 

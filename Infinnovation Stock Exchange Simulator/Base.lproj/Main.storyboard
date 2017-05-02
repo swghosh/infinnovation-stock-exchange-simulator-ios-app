@@ -595,16 +595,29 @@
                                             <segue destination="rPF-3e-QCG" kind="embed" identifier="GraphFromFullStock" id="Fyc-9E-mrH"/>
                                         </connections>
                                     </containerView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oep-v7-0up" userLabel="Info Control">
+                                        <rect key="frame" x="26" y="589.5" width="323" height="29"/>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlPress:" destination="gKF-x9-69B" eventType="valueChanged" id="nn3-Sz-IfY"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="faI-vi-hs7" firstAttribute="top" secondItem="pjg-5k-A7W" secondAttribute="top" constant="10" id="08Z-Um-nfd"/>
                                     <constraint firstItem="faI-vi-hs7" firstAttribute="leading" secondItem="pjg-5k-A7W" secondAttribute="leading" constant="16" id="6dQ-BY-Q8A"/>
+                                    <constraint firstItem="oep-v7-0up" firstAttribute="leading" secondItem="pjg-5k-A7W" secondAttribute="leading" constant="26" id="FiC-cs-PKz"/>
                                     <constraint firstAttribute="trailing" secondItem="faI-vi-hs7" secondAttribute="trailing" constant="16" id="Gat-r5-igY"/>
                                     <constraint firstItem="q9u-fR-GY8" firstAttribute="top" secondItem="faI-vi-hs7" secondAttribute="bottom" constant="10" id="Ib5-lK-rSi"/>
                                     <constraint firstItem="faI-vi-hs7" firstAttribute="centerX" secondItem="pjg-5k-A7W" secondAttribute="centerX" id="IfD-OK-Go2"/>
                                     <constraint firstItem="DO4-4S-fsX" firstAttribute="top" secondItem="q9u-fR-GY8" secondAttribute="bottom" constant="30" id="KN9-ei-xGc"/>
                                     <constraint firstItem="DO4-4S-fsX" firstAttribute="leading" secondItem="pjg-5k-A7W" secondAttribute="leading" constant="26" id="SyB-Vk-QI5"/>
-                                    <constraint firstAttribute="bottom" secondItem="DO4-4S-fsX" secondAttribute="bottom" constant="16" id="egC-zS-egG"/>
+                                    <constraint firstAttribute="trailing" secondItem="oep-v7-0up" secondAttribute="trailing" constant="26" id="bEe-gZ-fWY"/>
+                                    <constraint firstAttribute="bottom" secondItem="oep-v7-0up" secondAttribute="bottom" constant="10" id="eus-c4-Lrk"/>
+                                    <constraint firstItem="oep-v7-0up" firstAttribute="top" secondItem="DO4-4S-fsX" secondAttribute="bottom" constant="10" id="kow-gc-dfi"/>
                                     <constraint firstItem="q9u-fR-GY8" firstAttribute="centerX" secondItem="pjg-5k-A7W" secondAttribute="centerX" id="lFw-08-xG0"/>
                                     <constraint firstAttribute="trailing" secondItem="DO4-4S-fsX" secondAttribute="trailing" constant="26" id="zQz-SU-pIv"/>
                                 </constraints>
@@ -672,6 +685,7 @@
                         <outlet property="difference" destination="Tr5-nq-SlB" id="r1d-sR-HAy"/>
                         <outlet property="dividend" destination="Ek8-xL-WEA" id="Hkk-1N-wtY"/>
                         <outlet property="hvalue" destination="Uv2-fC-s3X" id="4PS-PP-7J3"/>
+                        <outlet property="infoControl" destination="oep-v7-0up" id="zh4-CW-AKi"/>
                         <outlet property="lcircuit" destination="FLD-Fc-Gwv" id="FiS-0L-MLe"/>
                         <outlet property="lvalue" destination="E3s-U8-BvA" id="cnT-yN-yNO"/>
                         <outlet property="name" destination="sbi-AB-es6" id="CyQ-r7-1hW"/>

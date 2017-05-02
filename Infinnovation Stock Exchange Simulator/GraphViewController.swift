@@ -47,6 +47,15 @@ class GraphViewController: UIViewController {
         }
         
         graphView.setNeedsDisplay()
+        
+        var i = 0
+        parentVC?.infoControl.removeAllSegments()
+        while (i < updates.count) {
+            parentVC?.infoControl.insertSegment(withTitle: "\(i)", at: i, animated: true)
+            i = i + 1
+        }
+        
+        parentVC?.updates = updates
     }
 
     override func viewDidLoad() {
