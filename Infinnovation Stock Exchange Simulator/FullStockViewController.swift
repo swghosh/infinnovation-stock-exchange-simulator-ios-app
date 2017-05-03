@@ -50,7 +50,7 @@ class FullStockViewController: UIViewController {
         super.viewDidLoad()
         
         // sets all label texts to have empty values
-        name.text = stock!.name
+        name.text = "\(stock!.name)"
         current.text = ""
         difference.text = ""
         percentage.text = ""
@@ -63,12 +63,14 @@ class FullStockViewController: UIViewController {
         ucircuit.text = ""
         dividend.text = ""
         bvalue.text = ""
+        lvalue.text = ""
+        hvalue.text = ""
     }
     
     func fetchAndSetup() {
         
         // makes an API call to fetch JSON data
-        let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
+        let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://sesapi.infinnovation.co/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
         // in case the apiCall doesn't return nil
         if apiCall.performApiCall() != nil {
             // serialise the json response into FullStockItem array

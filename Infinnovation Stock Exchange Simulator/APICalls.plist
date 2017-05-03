@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Stocks List API URL</key>
-	<string>https://infisesapi-vistas.rhcloud.com/api/stockslist</string>
+	<string>https://sesapi.infinnovation.co/api/stockslist</string>
 	<key>Stocks Profile List API URL</key>
-	<string>https://infisesapi-vistas.rhcloud.com/api/stockslist</string>
+	<string>https://sesapi.infinnovation.co/api/stockslist</string>
 	<key>Full Stock API URL</key>
-	<string>https://infisesapi-vistas.rhcloud.com/api/fullstock</string>
+	<string>https://sesapi.infinnovation.co/api/fullstock</string>
 	<key>Updates List API URL</key>
-	<string>https://infisesapi-vistas.rhcloud.com/api/updateslist</string>
+	<string>https://sesapi.infinnovation.co/api/updateslist</string>
 	<key>Headlines List API URL</key>
-	<string>https://infisesapi-vistas.rhcloud.com/api/headlineslist</string>
+	<string>https://sesapi.infinnovation.co/api/headlineslist</string>
 	<key>API Key</key>
 	<string>Z9FpluAnvXADniEcz9Rcvg28U1CdNC</string>
 </dict>

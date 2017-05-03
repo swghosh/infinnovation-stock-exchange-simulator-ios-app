@@ -34,7 +34,7 @@ class HeadlinesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func fetchAndSetupTable() {
         // makes an API call to fetch JSON data
-        let apiCall: HeadlinesListAPICall = HeadlinesListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/headlineslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
+        let apiCall: HeadlinesListAPICall = HeadlinesListAPICall(urlString: "https://sesapi.infinnovation.co/api/headlineslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         // in case the apiCall doesn't return nil
         if apiCall.performApiCall() != nil {
             // serialise the json response into StockItem array

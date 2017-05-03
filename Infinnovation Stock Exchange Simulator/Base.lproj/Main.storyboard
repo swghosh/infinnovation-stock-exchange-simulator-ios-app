@@ -598,8 +598,32 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oep-v7-0up" userLabel="Info Control">
                                         <rect key="frame" x="26" y="589.5" width="323" height="29"/>
                                         <segments>
+                                            <segment title="0"/>
                                             <segment title="1"/>
                                             <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                            <segment title="5"/>
+                                            <segment title="6"/>
+                                            <segment title="7"/>
+                                            <segment title="8"/>
+                                            <segment title="9"/>
+                                            <segment title="10"/>
+                                            <segment title="11"/>
+                                            <segment title="12"/>
+                                            <segment title="13"/>
+                                            <segment title="14"/>
+                                            <segment title="15"/>
+                                            <segment title="16"/>
+                                            <segment title="17"/>
+                                            <segment title="18"/>
+                                            <segment title="19"/>
+                                            <segment title="20"/>
+                                            <segment title="21"/>
+                                            <segment title="22"/>
+                                            <segment title="23"/>
+                                            <segment title="24"/>
+                                            <segment title="25"/>
                                         </segments>
                                         <connections>
                                             <action selector="segmentedControlPress:" destination="gKF-x9-69B" eventType="valueChanged" id="nn3-Sz-IfY"/>

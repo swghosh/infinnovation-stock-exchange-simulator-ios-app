@@ -39,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func fetchAndSetupTable() {
         // makes an API call to fetch JSON data
-        let apiCall: StocksListAPICall = StocksListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
+        let apiCall: StocksListAPICall = StocksListAPICall(urlString: "https://sesapi.infinnovation.co/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         // in case the apiCall doesn't return nil
         if apiCall.performApiCall() != nil {
             // serialise the json response into StockItem array
