@@ -13,6 +13,7 @@ class APICall {
     // data members to store the API URL and the JSON that is to be received
     var url: URL?
     var jsonData: Data?
+    var finished: Bool = false
     
     // initializer
     init(urlString:String, apiKey: String) {
@@ -26,11 +27,14 @@ class APICall {
     func performApiCall() -> Data? {
         
         // url request
-        let request = URLRequest(url: url!)
+        var request = URLRequest(url: url!)
         let sharedSession = URLSession.shared
         
-        // boolean variable holds false until data task finishes
-        var finished = false
+        // http method set to GET
+        request.httpMethod = "GET"
+        
+        // semaphore dispacth till completion handler
+        let semaphore = DispatchSemaphore(value: 0)
         
         // data task
         let task = sharedSession.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
@@ -38,14 +42,15 @@ class APICall {
             self.jsonData = data
             
             // boolean variable will store true when data task finishes
-            finished = true
+            self.finished = true
             
+            // signals semaphore that task finished
+            semaphore.signal()
         })
         task.resume()
         
-        while(!finished) {
-            // blocks the code till async task completion handler finishes
-        }
+        // semaphore waits indefinitely
+        _ = semaphore.wait(timeout: .distantFuture)
         
         return jsonData
     }
