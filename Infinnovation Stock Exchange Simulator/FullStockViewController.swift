@@ -70,7 +70,7 @@ class FullStockViewController: UIViewController {
     func fetchAndSetup() {
         
         // makes an API call to fetch JSON data
-        let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://sesapi.infinnovation.co/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
+        let apiCall: FullStockAPICall = FullStockAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/fullstock", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC", stock: stock!)
         // in case the apiCall doesn't return nil
         if apiCall.performApiCall() != nil {
             // serialise the json response into FullStockItem array

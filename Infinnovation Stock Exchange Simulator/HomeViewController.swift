@@ -16,7 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var stocksTableView: UITableView!
     
-    // stores an array of StockItem(s) based on data fetched from JSON using API calls
+    // stores an array of StockItem(s) basesd on data fetched from JSON using API calls
     var stocks: [StockItem] = [StockItem]()
     // stores an array of array of StockItem(s) sorted by sector
     var stocksSortBySector: [[StockItem]] = [[StockItem]]()
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func fetchAndSetupTable() {
         // makes an API call to fetch JSON data
-        let apiCall: StocksListAPICall = StocksListAPICall(urlString: "https://sesapi.infinnovation.co/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
+        let apiCall: StocksListAPICall = StocksListAPICall(urlString: "https://infisesapi-vistas.rhcloud.com/api/stockslist", apiKey: "Z9FpluAnvXADniEcz9Rcvg28U1CdNC")
         // in case the apiCall doesn't return nil
         if apiCall.performApiCall() != nil {
             // serialise the json response into StockItem array
