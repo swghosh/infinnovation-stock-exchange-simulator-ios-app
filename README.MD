@@ -1,4 +1,4 @@
-![App Screenshot](https://s17.postimg.org/x910c3mtb/35cc6f51510707.58f705e9d3c07.jpg)
+![App Screenshot](https://swghosh.github.io/images/infisespromo.png)
 # Infinnovation Stock Exchange Simulator iOS App
 
 https://stockexchangesimulator.infinnovation.co/
